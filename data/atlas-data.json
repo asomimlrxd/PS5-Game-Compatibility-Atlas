@@ -1,0 +1,2642 @@
+{
+  "meta": {
+    "project": "PS5 Game Compatibility Atlas",
+    "version": "0.2.0",
+    "application_version": "0.2.0",
+    "research_date": "2026-10-13",
+    "description_pt": "Atlas comunitário de resultados reportados por jogo, firmware, formato e armazenamento.",
+    "description_en": "Community atlas of reported results by game, firmware, format and storage.",
+    "disclaimer_pt": "Os registos são relatos públicos e não garantias de compatibilidade. Alguns são testes curtos, têm campos em falta ou contradizem outros relatos. O Atlas não aloja ficheiros; a secção separada de downloads limita-se a homebrew/release autorizados com origem identificada.",
+    "disclaimer_en": "Records are public reports, not compatibility guarantees. Some are short tests, omit fields or conflict with other reports. The Atlas does not host files; the separate downloads section is limited to authorised homebrew/releases with identified provenance."
+  },
+  "sources": [
+    {
+      "id": "reddit-1360-megathread",
+      "title": "Megathread: PS5 Games on FW 13.60",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-10-08",
+      "type": "Community reports",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1x0pduz/megathread_ps5_games_on_fw_1360/",
+      "notes_pt": "Fonte principal para os registos de firmware 13.60. Inclui comentários com resultados contraditórios, testes curtos e atualizações posteriores dos autores.",
+      "notes_en": "Primary source for firmware 13.60 reports. Includes conflicting comments, short tests and later author updates."
+    },
+    {
+      "id": "reddit-internal-ssd",
+      "title": "Internal SSD games compatibility list",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-06-01",
+      "type": "Community report thread",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1ttp7p6/internal_ssd_games_compatibility_list/",
+      "notes_pt": "Relatos centrados no SSD interno original. Alguns comentários especificam firmware e ferramentas; outros não. Os registos preservam essa incerteza.",
+      "notes_en": "Reports focused on the original internal SSD. Some comments state firmware and tools; others do not. Records preserve that uncertainty."
+    },
+    {
+      "id": "reddit-play-experience-fw6",
+      "title": "My experience with different games",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-08-14",
+      "type": "Community gameplay report",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1vobw9n/my_experience_with_different_games/",
+      "notes_pt": "Relato de um utilizador em PS5 base, firmware 6.00, ShadowMountPlus 1.6 e KStuff Lite 1.6. O autor confirma depois que os jogos mencionados estavam no SSD interno, mas nem sempre indica o formato.",
+      "notes_en": "One user's PS5 base report on firmware 6.00, ShadowMountPlus 1.6 and KStuff Lite 1.6. The author later says games were on internal SSD, but does not always state the format."
+    },
+    {
+      "id": "reddit-formats-1360",
+      "title": "Which file formats work on 13.60?",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-10-03",
+      "type": "Community format discussion",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1wwr8mi/which_file_formats_work_on_1360/",
+      "notes_pt": "Discussão geral sobre formatos no firmware 13.60. Várias afirmações são opiniões ou experiências não testadas pelo próprio comentador, pelo que não são tratadas como compatibilidade confirmada de um jogo específico.",
+      "notes_en": "General discussion of formats on firmware 13.60. Several claims are opinions or second-hand experiences, so they are not treated as verified compatibility for a specific game."
+    },
+    {
+      "id": "shadowmount-docs",
+      "title": "ShadowMountPlus — documentation and supported image types",
+      "publisher": "GitHub · drakmor/ShadowMountPlus",
+      "date": "2026-10-13",
+      "type": "Maintainer documentation",
+      "url": "https://github.com/drakmor/ShadowMountPlus",
+      "notes_pt": "A documentação identifica .ffpkg/UFS como recomendação geral, .exfat como opção de compatibilidade para títulos específicos e PFS/.ffpfs/.ffpfsc como experimental. Estas recomendações não garantem que todos os jogos funcionem.",
+      "notes_en": "Documentation recommends .ffpkg/UFS for general use, describes .exfat as a compatibility option for specific titles, and labels PFS/.ffpfs/.ffpfsc experimental. This does not guarantee every game will work."
+    },
+    {
+      "id": "github-smplus-77",
+      "title": "ShadowMountPlus 1.6test15-fix2 — game crash firmware 12.00",
+      "publisher": "GitHub · ShadowMountPlus issue #77",
+      "date": "2026-06-09",
+      "type": "Maintainer issue / community report",
+      "url": "https://github.com/drakmor/ShadowMountPlus/issues/77",
+      "notes_pt": "Compara Witcher 3: Complete Edition em firmware 12.00.43 e 4.03. O relato associa crash a uma configuração específica, sem provar que o formato seja a causa.",
+      "notes_en": "Compares The Witcher 3: Complete Edition on firmware 12.00.43 and 4.03. The report associates crashes with a particular setup but does not prove the format is the cause."
+    },
+    {
+      "id": "github-smplus-116",
+      "title": "Assassin's Creed Shadows crashes with Dolby Atmos, works with Linear PCM",
+      "publisher": "GitHub · ShadowMountPlus issue #116",
+      "date": "2026-09-29",
+      "type": "Closed issue with reproducible report",
+      "url": "https://github.com/drakmor/ShadowMountPlus/issues/116",
+      "notes_pt": "Relato detalhado: PPSA20397 v01.019.076, firmware 11.60 e .exfat. O autor diz que o crash com Dolby Atmos desaparece ao mudar a saída de áudio para Linear PCM.",
+      "notes_en": "Detailed report: PPSA20397 v01.019.076, firmware 11.60 and .exfat. The author says the crash with Dolby Atmos disappears when audio output is changed to Linear PCM."
+    },
+    {
+      "id": "reddit-returnal-audio",
+      "title": "Returnal audio issues",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-07-17",
+      "type": "Community troubleshooting report",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1uzdtbn/returnal_audio_issues/",
+      "notes_pt": "Relato de Returnal v03.000.005 em firmware 6.00, .ffpfsc e SSD interno. Os comentários sugerem diferenças de áudio entre formatos, mas a correção não foi testada de forma conclusiva pelo autor na mensagem inicial.",
+      "notes_en": "Returnal v03.000.005 report on firmware 6.00, .ffpfsc and internal SSD. Comments suggest audio differences across formats, but the initial author did not conclusively test a fix in the post."
+    },
+    {
+      "id": "reddit-ds2-1140",
+      "title": "Strange behaviour in Death Stranding 2 exFAT (11.40 Slim)",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-07-15",
+      "type": "Community gameplay report",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1ux6p8i/strange_behaviour_in_death_stranding_2_exfat_1140/",
+      "notes_pt": "Relato de desempenho variável em .exfat num SSD USB 3.1 externo; outros utilizadores descrevem experiências diferentes com pastas em unidades externas. Não permite concluir que um formato seja universalmente superior.",
+      "notes_en": "Reports variable behaviour with .exfat on an external USB 3.1 SSD; other users describe different results with folders on external drives. It does not establish one universally superior format."
+    },
+    {
+      "id": "reddit-ds2-1360",
+      "title": "PS5 13.60 jailbreak — Death Stranding 2 save issue",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-10-02",
+      "type": "Community troubleshooting report",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1wvzvhi/ps5_1360_jailbreak_ds2/",
+      "notes_pt": "O autor consegue jogar, mas os saves não persistem. Um comentário posterior reporta resolução após alteração de ficheiros de overlay; essa hipótese não é apresentada como solução universal nem recomendação do Atlas.",
+      "notes_en": "The author can play but saves do not persist. A later comment reports a fix after changing overlay files; this is not presented as a universal solution or Atlas recommendation."
+    },
+    {
+      "id": "reddit-yotei-pro",
+      "title": "Ghost of Yōtei missing PS5 Pro graphics modes on 13.60",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-10-04",
+      "type": "Community report with update",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1wxnvsd/ghost_of_yotei_missing_ps5_pro_graphics_modes_on/",
+      "notes_pt": "O autor relata que Ghost of Yōtei v1.512 funciona em firmware 13.60 mas não mostra modos gráficos Pro; depois diz que a combinação de uma pasta raw e uma correção separada de funções Pro resolveu esse ponto específico.",
+      "notes_en": "The author reports Ghost of Yōtei v1.512 running on firmware 13.60 but missing Pro graphics modes; later says a raw folder plus a separate Pro-feature fix resolved that specific issue."
+    },
+    {
+      "id": "github-smplus-97",
+      "title": "Trophy registration failed on PS4 games from .ffpfsc",
+      "publisher": "GitHub · ShadowMountPlus issue #97",
+      "date": "2026-07-27",
+      "type": "Open issue / format-specific report",
+      "url": "https://github.com/drakmor/ShadowMountPlus/issues/97",
+      "notes_pt": "Regista que jogos PS4 montam e são jogáveis através de .ffpfsc, mas a criação/registo de troféus devolve 0x80551618. É um problema funcional específico, não uma afirmação de que todos os jogos falham.",
+      "notes_en": "Reports PS4 games mounting and remaining playable through .ffpfsc, while trophy registration returns 0x80551618. This is a specific functionality issue, not evidence that all games fail."
+    },
+    {
+      "id": "github-smplus-72",
+      "title": "Image mount failed: 0x00000060 on PFS/PFSC",
+      "publisher": "GitHub · ShadowMountPlus issue #72",
+      "date": "2026-06-04",
+      "type": "Format-specific issue",
+      "url": "https://github.com/drakmor/ShadowMountPlus/issues/72",
+      "notes_pt": "O relato indica que, no firmware 12.70, uma pasta normal e uma imagem FFPKG/UFS2 funcionavam enquanto PFS/PFSC falhava. A página não justifica generalizar o resultado a todos os jogos ou versões.",
+      "notes_en": "The report states that on firmware 12.70 a normal folder and an FFPKG/UFS2 image worked while PFS/PFSC failed. It does not justify generalizing this to all games or versions."
+    },
+    {
+      "id": "reddit-community-sheet",
+      "title": "PS5 Games testing spreadsheet (community sheet)",
+      "publisher": "Google Sheets · linked from Reddit megathread",
+      "date": "2026-10-08 (linked)",
+      "type": "Community spreadsheet",
+      "url": "https://docs.google.com/spreadsheets/d/1JA_vPkk3BxPXRcBXzioWlBzC1s_a7h2tKHoYMv1lRYo/edit?usp=sharing",
+      "notes_pt": "A folha foi localizada e é mencionada na megathread. A vista pública acessível na pesquisa expôs o nome e alguns rótulos/legenda, mas não a grelha completa dos resultados; por isso não importei valores que não consegui verificar.",
+      "notes_en": "The sheet was located and linked from the megathread. The accessible public text view exposed its name and some legend labels, but not the complete result grid, so no unverifiable values were imported."
+    },
+    {
+      "id": "github-smplus-66",
+      "title": "Kernel panic when a PFS image filename contains parentheses",
+      "publisher": "GitHub · ShadowMountPlus issue #66",
+      "date": "2026-06 (issue date shown by GitHub)",
+      "type": "Maintainer issue / community report",
+      "url": "https://github.com/drakmor/ShadowMountPlus/issues/66",
+      "notes_pt": "O relato especifica Ghost Master Resurrection, firmware 6.02, ShadowMountPlus 1.6test15-fix2 e KStuff Lite 1.7 beta. O autor diz que a imagem .ffpfsc causava kernel panic quando o nome continha parênteses e que renomear o ficheiro permitiu que fosse carregado. É um caso específico de nome/versão, não uma regra sobre todos os ficheiros PFS.",
+      "notes_en": "The report specifies Ghost Master Resurrection, firmware 6.02, ShadowMountPlus 1.6test15-fix2 and KStuff Lite 1.7 beta. The author says the .ffpfsc image caused a kernel panic when the filename contained parentheses and that renaming the file allowed it to load. This is a specific filename/version case, not a rule for all PFS files."
+    },
+    {
+      "id": "reddit-apr-m2",
+      "title": "List of some tested APR games on the M.2 expansion SSD",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-06-08",
+      "type": "Community test list with later comments",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1u0j90p/list_of_some_tested_apr_games_as_exfat_format_or/",
+      "notes_pt": "Lista de testes em SSD M.2 de expansão, não no SSD original da consola. O autor indica PS5 FAT, firmware 11.60, ShadowMountPlus 1.6test15-fix2, KStuff Lite 1.07 beta e ferramentas de criação; avisa que a maioria dos jogos só foi iniciada e testada durante alguns minutos. Comentários posteriores incluem configurações diferentes e resultados contraditórios.",
+      "notes_en": "Test list for the M.2 expansion SSD, not the console's original SSD. The author states PS5 FAT, firmware 11.60, ShadowMountPlus 1.6test15-fix2, KStuff Lite 1.07 beta and creation tools; warns most games were only launched and tested for a few minutes. Later comments include different setups and conflicting results."
+    },
+    {
+      "id": "reddit-internal-y2jb",
+      "title": "PS5 and PS4 games working from internal storage on 11.60 using Y2JB-P2JB V2.4",
+      "publisher": "Reddit · r/PS5_Jailbreak",
+      "date": "2026-05-25",
+      "type": "Community gameplay report",
+      "url": "https://www.reddit.com/r/PS5_Jailbreak/comments/1tmuc1m/ps5_and_ps4_games_working_from_internal_storage/",
+      "notes_pt": "O autor relata um teste de Clair Obscur: Expedition 33 em pasta no armazenamento interno em firmware 11.60. Não indica duração, versão exata do jogo ou confirmação de conclusão; o contexto sugere que iniciou, por isso fica como teste preliminar.",
+      "notes_en": "The author reports testing Clair Obscur: Expedition 33 as a folder on internal storage on firmware 11.60. Duration, exact game version and completion were not stated; the context suggests it launched, so this is treated as a preliminary test."
+    },
+    {
+      "id": "reddit-old-compat-list",
+      "title": "PlayStation 5 Game Compatibility List (historical firmware table)",
+      "publisher": "Reddit · r/ps5homebrew",
+      "date": "2023-10-29",
+      "type": "Historical reference (not a jailbreak runtime test list)",
+      "url": "https://www.reddit.com/r/ps5homebrew/comments/17jek4h/playstation_5_game_compatibility_list/",
+      "notes_pt": "Lista histórica de jogos agrupados por firmware de lançamento/requisito. Não é evidência de que um jogo funcione em determinada configuração de jailbreak e, por isso, não foi fundida com os resultados de execução deste Atlas.",
+      "notes_en": "Historical list grouping games by release/required firmware. It is not evidence that a game works under a specific jailbreak setup, so it has not been merged into runtime compatibility results."
+    }
+  ],
+  "formats": [
+    {
+      "id": "folder",
+      "label": "Pasta / dump",
+      "label_en": "Folder / raw dump",
+      "extensions": "Diretório de jogo (por exemplo, TITLE_ID)",
+      "official_status": "documented",
+      "status_pt": "Estrutura suportada/documentada",
+      "status_en": "Documented folder workflow",
+      "summary_pt": "Estrutura de jogo extraída; não é uma imagem comprimida. A documentação do ShadowMountPlus descreve convenções de pasta e requer um diretório de jogo válido. Os resultados continuam a variar com metadados, permissões, firmware e origem.",
+      "summary_en": "Extracted game folder; not a compressed image. ShadowMountPlus documents folder conventions and expects a valid game directory. Results still vary with metadata, permissions, firmware and source.",
+      "recommendation_pt": "Verificar estrutura/metadados; não concluir compatibilidade apenas por a pasta ser detetada.",
+      "recommendation_en": "Check layout/metadata; detection alone is not proof of compatibility.",
+      "source": "shadowmount-docs"
+    },
+    {
+      "id": "ffpkg",
+      "label": ".ffpkg / UFS",
+      "label_en": ".ffpkg / UFS",
+      "extensions": ".ffpkg",
+      "official_status": "recommended",
+      "status_pt": "Recomendado pelo mantenedor",
+      "status_en": "Maintainer-recommended",
+      "summary_pt": "A documentação atual recomenda UFS (.ffpkg) como opção geral. Vários relatos comunitários indicam bons resultados, mas há casos de ecrã preto ou problemas específicos por jogo/firmware.",
+      "summary_en": "Current docs recommend UFS (.ffpkg) as the general option. Community reports include positive results, but also black screens and title/firmware-specific issues.",
+      "recommendation_pt": "Opção geral indicada pela documentação; confirmar sempre o jogo, firmware e versão das ferramentas.",
+      "recommendation_en": "General option per documentation; still verify title, firmware and tool versions.",
+      "source": "shadowmount-docs"
+    },
+    {
+      "id": "exfat",
+      "label": ".exfat",
+      "label_en": ".exfat",
+      "extensions": ".exfat",
+      "official_status": "compatibility",
+      "status_pt": "Compatibilidade / títulos específicos",
+      "status_en": "Compatibility / specific titles",
+      "summary_pt": "O mantenedor indica exFAT para títulos que precisam de comportamento semelhante ao conteúdo de uma unidade externa. A comunidade reporta casos em que funciona melhor e outros com stutter, erros de save, áudio ou crashes.",
+      "summary_en": "The maintainer describes exFAT for titles needing external-drive-style behaviour. Community reports include cases where it works better and others with stutter, save, audio or crash issues.",
+      "recommendation_pt": "Não tratar como o melhor formato universal. Registar também a localização física do ficheiro.",
+      "recommendation_en": "Do not treat it as universally best. Record the physical storage location too.",
+      "source": "shadowmount-docs"
+    },
+    {
+      "id": "ffpfs",
+      "label": ".ffpfs / PFS",
+      "label_en": ".ffpfs / PFS",
+      "extensions": ".ffpfs",
+      "official_status": "experimental",
+      "status_pt": "Experimental",
+      "status_en": "Experimental",
+      "summary_pt": "A tabela oficial de tipos de imagem classifica PFS como experimental. Os relatos são dependentes da ferramenta que criou a imagem e da versão do ShadowMountPlus.",
+      "summary_en": "The official image support table labels PFS experimental. Reports depend on the tool that created the image and the ShadowMountPlus version.",
+      "recommendation_pt": "Marcar sempre a ferramenta de criação e versão; não comparar sem esses dados.",
+      "recommendation_en": "Always record the creation tool and version; avoid comparisons without them.",
+      "source": "shadowmount-docs"
+    },
+    {
+      "id": "ffpfsc",
+      "label": ".ffpfsc / PFS container",
+      "label_en": ".ffpfsc / PFS container",
+      "extensions": ".ffpfsc",
+      "official_status": "experimental",
+      "status_pt": "Experimental",
+      "status_en": "Experimental",
+      "summary_pt": "Contentor PFS aninhado/comprimido. O mantenedor classifica-o como experimental. Existem relatos de problemas de montagem, crashes, áudio e desempenho; outros referem que funciona em determinadas configurações.",
+      "summary_en": "Nested/compressed PFS container. The maintainer labels it experimental. Reports include mount failures, crashes, audio and performance issues, while others say it works in particular setups.",
+      "recommendation_pt": "Não assumir que comprimir melhora compatibilidade; registar sistema de ficheiros interno e ferramenta de criação quando conhecidos.",
+      "recommendation_en": "Do not assume compression improves compatibility; record the inner filesystem and creation tool when known.",
+      "source": "shadowmount-docs"
+    },
+    {
+      "id": "lz4",
+      "label": "LZ4 (relato comunitário)",
+      "label_en": "LZ4 (community-reported)",
+      "extensions": "Varia conforme a ferramenta / Varies by tool",
+      "official_status": "community",
+      "status_pt": "Relatos comunitários; não é uma categoria da tabela oficial de imagens",
+      "status_en": "Community-reported; not a category in the official image table",
+      "summary_pt": "A comunidade usa a etiqueta LZ4 para alguns formatos/fluxos comprimidos. Há relatos de melhoria de estabilidade num jogo e de conclusão sem problemas, mas isto não prova que LZ4 seja a causa nem que o resultado se generalize.",
+      "summary_en": "Community posts use the LZ4 label for some compressed formats/workflows. Reports describe improved stability for one title and a clean completion, but this does not prove LZ4 is the cause or that the result generalizes.",
+      "recommendation_pt": "Guardar a ferramenta e parâmetros exatos, não apenas a etiqueta LZ4.",
+      "recommendation_en": "Record the exact tool and parameters, not just the LZ4 label.",
+      "source": "reddit-1360-megathread"
+    },
+    {
+      "id": "ps4-ffpkg",
+      "label": "PS4 Fake PKG (contexto separado)",
+      "label_en": "PS4 Fake PKG (separate context)",
+      "extensions": ".pkg / formato PS4 referido pela comunidade",
+      "official_status": "separate",
+      "status_pt": "Não comparar diretamente com imagens PS5",
+      "status_en": "Do not compare directly with PS5 images",
+      "summary_pt": "Alguns relatos dizem respeito a jogos PS4 em formatos fake PKG e a falhas de registo de troféus. Estes casos devem ser filtrados separadamente dos jogos PS5 e não tratados como prova de compatibilidade de imagens .ffpkg/UFS.",
+      "summary_en": "Some reports concern PS4 games in fake PKG formats and trophy-registration failures. Keep these separate from PS5 games and do not confuse them with .ffpkg/UFS images.",
+      "recommendation_pt": "O Atlas evita fundir terminologia ambígua: extensão/tipo de pacote são guardados como declarados na fonte.",
+      "recommendation_en": "The Atlas avoids merging ambiguous terms: package type/extension is recorded as stated by the source.",
+      "source": "github-smplus-97"
+    }
+  ],
+  "reports": [
+    {
+      "id": "R001",
+      "game": "Wolverine",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "Um utilizador reporta dessincronização, problemas de texturas e crashes após 1–2 horas. Refere que resolveu o seu caso ao converter a pasta para LZ4; é um resultado individual.",
+      "summary_en": "A user reports desync, texture issues and crashes after 1–2 hours. They say converting the folder to LZ4 resolved their case; this is an individual result.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "KStuff Lite 1.11; ShadowMountPlus 1.7 beta 4 (report states)",
+      "extent_pt": "Sessões prolongadas, problemas após 1–2 horas.",
+      "extent_en": "Longer sessions; issues after 1–2 hours.",
+      "symptoms_pt": "Dessincronização, texturas e crashes.",
+      "symptoms_en": "Desync, texture issues and crashes.",
+      "resolution_pt": "O autor diz que converter para LZ4 resolveu este caso; não generalizar.",
+      "resolution_en": "Author says converting to LZ4 fixed this case; do not generalize.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R002",
+      "game": "Wolverine",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "LZ4"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "Outro comentário diz ter terminado o jogo inteiro em LZ4 no SSD interno sem problemas. É um segundo relato, não uma garantia de compatibilidade.",
+      "summary_en": "Another comment says the entire game was completed in LZ4 on internal SSD without issues. This is a separate report, not a compatibility guarantee.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "O autor afirma ter terminado o jogo.",
+      "extent_en": "Reporter says the entire game was completed.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "Contrasta com relatos de problemas noutros formatos/configurações.",
+      "note_en": "Contrasts with reports of issues on other formats/setups."
+    },
+    {
+      "id": "R003",
+      "game": "Control Resonant",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT",
+        "Folder"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD",
+        "SSD M.2"
+      ],
+      "status": "crashes",
+      "summary_pt": "Foram reportados crashes num elevador em formatos de pasta e exFAT, tanto no SSD interno como em M.2. Não foi indicada uma solução.",
+      "summary_en": "Crashes in an elevator were reported with folder and exFAT formats on internal and M.2 storage. No fix was reported.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Crash num ponto específico do jogo.",
+      "extent_en": "Crash at a specific point in the game.",
+      "symptoms_pt": "Crash no elevador.",
+      "symptoms_en": "Crash in elevator.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R004",
+      "game": "Blood of the Dawnwalker",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT",
+        "Folder"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD",
+        "SSD M.2"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "Um utilizador reporta stuttering; diz que a pasta no SSD M.2 teve muito menos stuttering. Não foi declarada uma sessão completa nem uma correção definitiva.",
+      "summary_en": "A user reports stuttering and says a folder on M.2 SSD had much less stuttering. No full playthrough or definitive fix was stated.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Comparação qualitativa entre formatos/localizações.",
+      "extent_en": "Qualitative comparison across formats/storage locations.",
+      "symptoms_pt": "Stuttering.",
+      "symptoms_en": "Stuttering.",
+      "resolution_pt": "Pasta em M.2 pareceu melhor neste caso.",
+      "resolution_en": "Folder on M.2 seemed better in this case.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R005",
+      "game": "Pragmata",
+      "title_id": "",
+      "firmware": "13.00",
+      "formats": [
+        "Folder"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "Relato de jogo sem erros identificados, em pasta no SSD interno, com firmware 13.00. A duração do teste não foi indicada.",
+      "summary_en": "Reported with no issues found, using a folder on internal SSD and firmware 13.00. Test duration was not stated.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Autoloader; APR-emu atualizado (segundo o comentário)",
+      "extent_pt": "Duração do teste não indicada.",
+      "extent_en": "Test duration not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R006",
+      "game": "Pragmata",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2"
+      ],
+      "status": "playable_short",
+      "summary_pt": "O comentário diz que ainda não encontrou problemas com exFAT em M.2. O teste parece preliminar; não é um resultado de jogo completo.",
+      "summary_en": "The comment says no issues had been found yet with exFAT on M.2. The test appears preliminary, not a full-playthrough result.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Sem problemas encontrados até ao momento; duração desconhecida.",
+      "extent_en": "No issues found so far; duration unknown.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R007",
+      "game": "Samson",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder"
+      ],
+      "storage": [
+        "SSD M.2"
+      ],
+      "status": "playable_short",
+      "summary_pt": "Um utilizador diz não ter encontrado problemas até ao momento com uma pasta em M.2. Não há duração ou versão do jogo indicadas.",
+      "summary_en": "A user says no issues had been found yet with a folder on M.2. Duration and game version were not provided.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Teste inicial, duração desconhecida.",
+      "extent_en": "Initial test; duration unknown.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R008",
+      "game": "Onimusha",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "Foi reportada ausência de áudio, exceto quando a saída está configurada para mono. Não há solução geral confirmada.",
+      "summary_en": "Audio was reported missing except when output was set to mono. No general fix was confirmed.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Sem áudio na configuração normal.",
+      "symptoms_en": "No audio under normal output settings.",
+      "resolution_pt": "O autor indica mono como contorno temporário.",
+      "resolution_en": "Reporter indicates mono as a workaround.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R009",
+      "game": "Onimusha",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD",
+        "SSD externo / External SSD"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "Outro utilizador reporta CE-107099-6 e impossibilidade de criar ficheiros de gravação, tanto no SSD interno como num SSD externo. Não resolveu no seu caso.",
+      "summary_en": "Another user reports CE-107099-6 and inability to create save files on both internal and external SSD. The issue was unresolved for that reporter.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Erro CE-107099-6; falha ao criar saves.",
+      "symptoms_en": "CE-107099-6; save creation fails.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "Não é o mesmo teste que o relato de áudio em pasta.",
+      "note_en": "This is not the same test as the folder/audio report."
+    },
+    {
+      "id": "R010",
+      "game": "Halo",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD",
+        "USB externo / External USB"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "O jogo falha no arranque. O utilizador diz ter verificado a ativação da conta; não relatou uma correção.",
+      "summary_en": "The game crashes at startup. The user says account activation was checked; no fix was reported.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Crash ao iniciar.",
+      "symptoms_en": "Crash on startup.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R011",
+      "game": "Mortal Shell 2",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "Não indicada / Not stated"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "Um comentário diz ter o mesmo problema de crash no arranque que o relato de Halo, mas não detalha formato, armazenamento ou teste.",
+      "summary_en": "A comment says it has the same startup-crash issue as the Halo report, but gives no format, storage or test details.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Relato breve, detalhes em falta.",
+      "extent_en": "Brief report; details missing.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R012",
+      "game": "Silent Hill Townfall",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder",
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD",
+        "SSD externo / External SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O jogo foi descrito com muito lag, texturas lentas e problemas gráficos 3D. O autor refere que a conversão para .ffpfsc piorou o resultado e afetou a iluminação.",
+      "summary_en": "The game was described as heavily lagging, with slow textures and 3D graphics problems. The author says conversion to .ffpfsc made it worse and affected lighting.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Lag intenso, texturas lentas e iluminação defeituosa após conversão.",
+      "symptoms_en": "Heavy lag, slow textures and broken lighting after conversion.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R013",
+      "game": "Demon's Souls Remake",
+      "title_id": "",
+      "firmware": "13.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "No teste comparativo, exFAT iniciou o jogo, mas foram observados stuttering, distorção de áudio e crashes. O autor não considerou o problema resolvido.",
+      "summary_en": "In a format comparison, exFAT launched the game but had stuttering, audio distortion and crashes. The reporter did not consider the issue resolved.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Teste explícito em firmware 13.60; sessão completa não confirmada.",
+      "extent_en": "Explicit firmware 13.60 test; full playthrough not confirmed.",
+      "symptoms_pt": "Stuttering, distorção de som e crashes.",
+      "symptoms_en": "Stuttering, sound distortion and crashes.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R014",
+      "game": "Demon's Souls Remake",
+      "title_id": "",
+      "firmware": "13.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "No mesmo teste, .ffpfsc apresentou problemas semelhantes aos de exFAT, descritos como piores devido à compressão adicional.",
+      "summary_en": "In the same test, .ffpfsc had similar issues to exFAT, described as worse with the additional compression.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Stuttering, distorção de áudio e crashes, piores segundo o relato.",
+      "symptoms_en": "Stuttering, audio distortion and crashes, reportedly worse.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R015",
+      "game": "Demon's Souls Remake",
+      "title_id": "",
+      "firmware": "13.60",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "O dump em pasta ficou num ecrã preto no teste de firmware 13.60. Não houve uma correção confirmada no relato.",
+      "summary_en": "The folder dump showed a black screen in the firmware 13.60 test. No confirmed fix was reported.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Ecrã preto.",
+      "symptoms_en": "Black screen.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R016",
+      "game": "Demon's Souls Remake",
+      "title_id": "",
+      "firmware": "13.60",
+      "formats": [
+        ".ffpkg / UFS"
+      ],
+      "storage": [
+        "SSD interno / Internal SSD"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "A imagem .ffpkg também ficou num ecrã preto no teste indicado. Outro comentador levantou hipóteses relacionadas com a origem, mas o problema não ficou comprovadamente resolvido.",
+      "summary_en": "The .ffpkg image also showed a black screen in the reported test. Another commenter raised source-related hypotheses, but the issue was not conclusively resolved.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Ecrã preto.",
+      "symptoms_en": "Black screen.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R017",
+      "game": "Saros",
+      "title_id": "",
+      "firmware": "13.20 / 13.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O autor relata cerca de cinco horas jogadas, com pequenos soluços nas cinemáticas/transições e dois glitches de textura, sem impacto relevante na jogabilidade.",
+      "summary_en": "The reporter describes about five hours of play, with minor stutters in cinematics/transitions and two texture glitches, without meaningful gameplay impact.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "PPSA07631 EUR; backport 5.xx+ (as reported)",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Cerca de cinco horas.",
+      "extent_en": "Around five hours.",
+      "symptoms_pt": "Pequenos stutters e glitches de textura.",
+      "symptoms_en": "Minor stutters and texture glitches.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R018",
+      "game": "Saros",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "Outro utilizador reporta áudio muito distorcido, especialmente nos auscultadores ligados ao comando. O autor suspeita da origem, mas não confirma a causa.",
+      "summary_en": "Another user reports heavily distorted audio, especially through a headset connected to the controller. The reporter suspects the source but does not confirm the cause.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Áudio distorcido em várias saídas.",
+      "symptoms_en": "Distorted audio on multiple outputs.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "Contrasta com o relato de Saros exFAT jogável; formatos e origem diferem.",
+      "note_en": "Contrasts with the playable Saros exFAT report; format/source differ."
+    },
+    {
+      "id": "R019",
+      "game": "Ghost of Yōtei",
+      "title_id": "",
+      "firmware": "11.40",
+      "formats": [
+        ".ffpkg / UFS"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "Um comentário afirma que o jogo funciona em .ffpkg no SSD interno com firmware 11.40, KStuff Lite 1.06 e ShadowMountPlus 1.6test11. Não fornece uma duração de teste.",
+      "summary_en": "A comment says the game works as .ffpkg on internal SSD with firmware 11.40, KStuff Lite 1.06 and ShadowMountPlus 1.6test11. Test duration was not provided.",
+      "source": "reddit-internal-ssd",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "KStuff Lite 1.06; ShadowMountPlus 1.6test11 (as reported)",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R020",
+      "game": "Ghost of Yōtei",
+      "title_id": "",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpkg / UFS"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "Um utilizador relata cerca de 14 horas de jogo e funcionamento geral normal, mas tempos de carregamento iniciais longos e alguns segundos de espera ao abrir o mapa.",
+      "summary_en": "A user reports around 14 hours of play and generally normal operation, but long initial loading and a few seconds' delay when opening the map.",
+      "source": "reddit-internal-ssd",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Cerca de 14 horas, segundo o comentário.",
+      "extent_en": "Around 14 hours, according to the comment.",
+      "symptoms_pt": "Carregamento inicial e mapa lentos.",
+      "symptoms_en": "Slow initial load and map opening.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R021",
+      "game": "Ghost of Yōtei",
+      "title_id": "",
+      "firmware": "13.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "Não indicada / Not stated"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "Um utilizador reporta um erro de entitlement ao iniciar, depois de tentar exFAT. Um comentário sugere uma alteração de permissões, mas não confirma o resultado desse utilizador.",
+      "summary_en": "A user reports an entitlement error at launch after trying exFAT. A comment suggests a permissions change but does not confirm that it worked for the original reporter.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Erro de entitlement/arranque.",
+      "symptoms_en": "Entitlement/startup error.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "A sugestão comunitária não é uma correção confirmada.",
+      "note_en": "The community suggestion is not a confirmed fix."
+    },
+    {
+      "id": "R022",
+      "game": "Ghost of Yōtei",
+      "title_id": "",
+      "firmware": "13.60",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "resolved",
+      "summary_pt": "Num teste separado em PS5 Pro, a versão v1.512 funcionava, mas faltavam modos gráficos Pro. O autor afirma que uma pasta raw e uma correção Pro separada resolveram essa funcionalidade.",
+      "summary_en": "In a separate PS5 Pro test, v1.512 ran but Pro graphics modes were missing. The author says a raw folder and a separate Pro-feature fix restored that feature.",
+      "source": "reddit-yotei-pro",
+      "console": "PS5 Pro",
+      "game_version": "v1.512 (as reported)",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "O relato incide nos modos gráficos Pro, não numa certificação de jogo completo.",
+      "extent_en": "The report concerns Pro graphics modes, not a full-playthrough certification.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R023",
+      "game": "Returnal",
+      "title_id": "",
+      "firmware": "11.40",
+      "formats": [
+        ".ffpkg / UFS"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "A lista comunitária indica que Returnal funcionou em .ffpkg no SSD interno com firmware 11.40, KStuff Lite 1.06 e ShadowMountPlus 1.6test11.",
+      "summary_en": "The community list says Returnal worked as .ffpkg on internal SSD with firmware 11.40, KStuff Lite 1.06 and ShadowMountPlus 1.6test11.",
+      "source": "reddit-internal-ssd",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "KStuff Lite 1.06; ShadowMountPlus 1.6test11 (as reported)",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R024",
+      "game": "Returnal",
+      "title_id": "",
+      "firmware": "6.00",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O autor reportou soluços de áudio durante tiros e quando surgem muitos inimigos, com a versão 03.000.005 em .ffpfsc. Os comentários sugerem diferenças entre formatos, sem teste conclusivo no próprio post.",
+      "summary_en": "The reporter described audio stutter during shooting and when many enemies appear, using version 03.000.005 in .ffpfsc. Comments suggest format differences, without a conclusive test in the original post.",
+      "source": "reddit-returnal-audio",
+      "console": "Não indicado / Not stated",
+      "game_version": "03.000.005",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Soluços de áudio; desempenho visual descrito como normal.",
+      "symptoms_en": "Audio stutter; visual performance described as normal.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R025",
+      "game": "Star Wars Outlaws",
+      "title_id": "",
+      "firmware": "11.40",
+      "formats": [
+        ".ffpkg / UFS"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "A lista comunitária indica que o jogo funcionou em .ffpkg no SSD interno com firmware 11.40, KStuff Lite 1.06 e ShadowMountPlus 1.6test11.",
+      "summary_en": "The community list says the game worked as .ffpkg on internal SSD with firmware 11.40, KStuff Lite 1.06 and ShadowMountPlus 1.6test11.",
+      "source": "reddit-internal-ssd",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "KStuff Lite 1.06; ShadowMountPlus 1.6test11 (as reported)",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R026",
+      "game": "Astro Bot",
+      "title_id": "",
+      "firmware": "13.00",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "O autor relata que o jogo não teve crashes em pasta no SSD interno, num conjunto de testes em firmware 13.00. Não indica a duração desse teste específico.",
+      "summary_en": "The reporter says the game had no crashes as a folder on internal SSD in a set of tests on firmware 13.00. Duration for this specific test was not given.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R027",
+      "game": "Astro Bot",
+      "title_id": "",
+      "firmware": "6.00",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "O autor de um relato de gameplay diz ter terminado Astro Bot sem problemas no firmware 6.00, com ShadowMountPlus 1.6 e KStuff Lite 1.6; o formato não foi especificado.",
+      "summary_en": "The author of a gameplay report says Astro Bot was completed without issues on firmware 6.00 with ShadowMountPlus 1.6 and KStuff Lite 1.6; format was not specified.",
+      "source": "reddit-play-experience-fw6",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "ShadowMountPlus 1.6; KStuff Lite 1.6",
+      "extent_pt": "Jogo terminado, segundo o autor.",
+      "extent_en": "Game completed, according to the author.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R028",
+      "game": "Astro's Playroom",
+      "title_id": "",
+      "firmware": "6.00",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "O mesmo autor diz ter terminado Astro's Playroom sem problemas; não especifica formato nem versão do jogo.",
+      "summary_en": "The same author says Astro's Playroom was completed without issues; format and game version were not specified.",
+      "source": "reddit-play-experience-fw6",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "ShadowMountPlus 1.6; KStuff Lite 1.6",
+      "extent_pt": "Jogo terminado, segundo o autor.",
+      "extent_en": "Game completed, according to the author.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R029",
+      "game": "Clair Obscur: Expedition 33",
+      "title_id": "",
+      "firmware": "6.00",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "O autor relata ter terminado o jogo sem problemas num sistema com firmware 6.00, ShadowMountPlus 1.6 e KStuff Lite 1.6. O formato não é indicado.",
+      "summary_en": "The author reports completing the game without issues on firmware 6.00, ShadowMountPlus 1.6 and KStuff Lite 1.6. Format was not stated.",
+      "source": "reddit-play-experience-fw6",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "ShadowMountPlus 1.6; KStuff Lite 1.6",
+      "extent_pt": "Jogo terminado, segundo o autor.",
+      "extent_en": "Game completed, according to the author.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R030",
+      "game": "Ratchet & Clank: Rift Apart",
+      "title_id": "",
+      "firmware": "6.00",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O autor diz ter terminado o jogo, com uma zona em que foi necessário pausar e retomar para continuar. Não especifica o formato.",
+      "summary_en": "The author says the game was completed, with one area where pausing and resuming was needed to continue. Format was not stated.",
+      "source": "reddit-play-experience-fw6",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "ShadowMountPlus 1.6; KStuff Lite 1.6",
+      "extent_pt": "Jogo terminado, com um problema pontual.",
+      "extent_en": "Game completed, with one isolated issue.",
+      "symptoms_pt": "Um bloqueio/avanço numa zona específica.",
+      "symptoms_en": "A stall/progression issue in one area.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R031",
+      "game": "Warhammer 40,000: Space Marine 2",
+      "title_id": "",
+      "firmware": "6.00",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O autor terminou o jogo e considera-o jogável, mas observou stuttering em algumas cinemáticas. O formato não foi informado.",
+      "summary_en": "The author completed the game and considered it playable, but observed stuttering in some cutscenes. Format was not stated.",
+      "source": "reddit-play-experience-fw6",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "ShadowMountPlus 1.6; KStuff Lite 1.6",
+      "extent_pt": "Jogo terminado, com problemas em algumas cinemáticas.",
+      "extent_en": "Game completed, with issues in some cutscenes.",
+      "symptoms_pt": "Stuttering nas cinemáticas.",
+      "symptoms_en": "Cutscene stuttering.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R032",
+      "game": "Mafia: The Old Country",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O utilizador reporta stuttering durante corridas e quando há muito movimento no ecrã. Não indica uma solução.",
+      "summary_en": "The user reports stuttering during races and when there is a lot of on-screen movement. No fix was stated.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Stuttering em cenas movimentadas.",
+      "symptoms_en": "Stuttering in busy scenes.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R033",
+      "game": "Mafia: The Old Country",
+      "title_id": "",
+      "firmware": "6.00",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "Num relato de gameplay separado, o autor diz que o stuttering era tão forte que apagou o jogo durante o capítulo 9. Outro utilizador comentou que também observou stuttering numa versão comercial, pelo que a causa não fica isolada ao jailbreak.",
+      "summary_en": "In a separate gameplay report, the author says stuttering was severe enough that they deleted the game during chapter 9. Another user commented that they had also seen stuttering in a retail version, so the cause is not isolated to the jailbreak.",
+      "source": "reddit-play-experience-fw6",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "ShadowMountPlus 1.6; KStuff Lite 1.6",
+      "extent_pt": "Teste até ao capítulo 9; não concluído.",
+      "extent_en": "Tested up to chapter 9; not completed.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "Há relatos de comportamento diferente noutros sistemas e formatos.",
+      "note_en": "Other systems and formats have different reports."
+    },
+    {
+      "id": "R034",
+      "game": "Spider-Man 2",
+      "title_id": "",
+      "firmware": "13.00",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD externo / External SSD"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "Relato de ecrã preto ao iniciar a pasta de jogo a partir de um SSD externo. O autor diz ter atualizado APR-emu, sem resolver o caso.",
+      "summary_en": "A black screen was reported when launching a folder game from an external SSD. The author says updating APR-emu did not fix it.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Ecrã preto ao iniciar.",
+      "symptoms_en": "Black screen on launch.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R035",
+      "game": "Resident Evil Requiem",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT",
+        "LZ4",
+        "Folder"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "resolved",
+      "summary_pt": "O autor inicialmente teve ecrã preto em exFAT, LZ4 e pasta; depois confirmou que a origem usada tinha ficheiros em falta e que uma origem diferente carregou corretamente em exFAT.",
+      "summary_en": "The author initially saw a black screen in exFAT, LZ4 and folder form; later confirmed the source they had used was missing files and that a different source loaded correctly as exFAT.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Ecrã preto numa origem incompleta.",
+      "symptoms_en": "Black screen with an incomplete source.",
+      "resolution_pt": "O autor atribuiu o problema à origem incompleta; não é uma recomendação de origem/download.",
+      "resolution_en": "The author attributed the issue to an incomplete source; this is not a source/download recommendation.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R036",
+      "game": "Resident Evil Requiem",
+      "title_id": "",
+      "firmware": "13.00",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD",
+        "SSD externo / External SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "Um utilizador com PS5 Pro diz que funcionou em exFAT, no SSD interno e externo. Não fornece duração ou versão exata do jogo.",
+      "summary_en": "A PS5 Pro user says it worked as exFAT from internal and external SSD. Duration and exact game version were not provided.",
+      "source": "reddit-1360-megathread",
+      "console": "PS5 Pro",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Teste sem problemas reportados; duração não indicada.",
+      "extent_en": "No issues reported; duration not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R037",
+      "game": "UFC 6",
+      "title_id": "PPSA23566",
+      "firmware": "13.60",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "resolved",
+      "summary_pt": "O jogo não iniciava e aparecia bloqueado; o autor diz que passou a funcionar depois de renomear a pasta para o Title ID PPSA23566.",
+      "summary_en": "The game would not launch and appeared locked; the author says it started working after renaming the folder to Title ID PPSA23566.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Renomear a pasta para PPSA23566 resolveu o caso reportado.",
+      "resolution_en": "Renaming the folder to PPSA23566 resolved the reported case.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R038",
+      "game": "Devil May Cry 5",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT",
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD",
+        "HDD externo / External HDD"
+      ],
+      "status": "crashes",
+      "summary_pt": "O jogo funciona inicialmente, mas crasha numa cutscene específica, quer seja vista quer seja saltada. O comportamento foi reportado em exFAT e .ffpfsc.",
+      "summary_en": "The game initially runs but crashes at a specific cutscene, whether watched or skipped. This was reported for exFAT and .ffpfsc.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Crash numa cutscene específica.",
+      "symptoms_en": "Crash at a specific cutscene.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R039",
+      "game": "Horizon Forbidden West",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder / dump",
+        "exFAT",
+        "LZ4"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD",
+        "SSD M.2",
+        "SSD externo / External SSD"
+      ],
+      "status": "crashes",
+      "summary_pt": "Foi reportado freeze ao atravessar para outra zona do mapa, com pasta, exFAT e LZ4 em várias localizações. Não foi indicada uma solução.",
+      "summary_en": "A freeze when travelling to another side of the map was reported across folder, exFAT and LZ4 on several storage locations. No fix was stated.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Freeze durante deslocação entre zonas do mapa.",
+      "symptoms_en": "Freeze while travelling between map areas.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R040",
+      "game": "NHL 2027",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "Um comentário diz que a versão exFAT no armazenamento interno corre perfeitamente. Não indica o firmware nem a duração de teste individualmente; o contexto é uma megathread de 13.60.",
+      "summary_en": "A comment says the exFAT version runs perfectly from internal storage. It does not state firmware or individual test duration; the thread context is firmware 13.60.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Duração não indicada.",
+      "extent_en": "Duration not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R041",
+      "game": "Hollow Knight: Silksong",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD externo / External SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "O comentário agrupa Silksong em pasta e Horizon Zero Dawn Remastered em exFAT como jogos sem problemas num SSD externo. O relato não indica duração ou versão.",
+      "summary_en": "The comment groups Silksong in folder form and Horizon Zero Dawn Remastered in exFAT as having no issues on an external SSD. Duration and game version were not stated.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R042",
+      "game": "Horizon Zero Dawn Remastered",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD externo / External SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "O comentário relata ausência de problemas com exFAT num SSD externo. Não indica duração ou versão exata.",
+      "summary_en": "The comment reports no issues with exFAT on an external SSD. Duration and exact version were not stated.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R043",
+      "game": "Metaphor: ReFantazio",
+      "title_id": "",
+      "firmware": "13.60 (contexto da megathread / thread context)",
+      "formats": [
+        "Folder / dump",
+        "exFAT"
+      ],
+      "storage": [
+        "SSD externo / External SSD"
+      ],
+      "status": "crashes",
+      "summary_pt": "O comentário indica crashes na primeira dungeon em formatos de pasta e exFAT a partir de um SSD externo.",
+      "summary_en": "The comment reports crashes at the first dungeon in folder and exFAT formats from an external SSD.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Crash na primeira dungeon.",
+      "symptoms_en": "Crash in the first dungeon.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R044",
+      "game": "Ace Combat 8",
+      "title_id": "",
+      "firmware": "13.20",
+      "formats": [
+        ".ffpkg / UFS"
+      ],
+      "storage": [
+        "SSD M.2"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "Relato explícito de crash ao iniciar a versão 01.001.001 em .ffpkg no SSD M.2, firmware 13.20. Não resolvido no comentário.",
+      "summary_en": "Explicit report of a launch crash with version 01.001.001 in .ffpkg on M.2 SSD, firmware 13.20. Unresolved in the comment.",
+      "source": "reddit-1360-megathread",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.001.001",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Crash ao iniciar.",
+      "symptoms_en": "Crash on launch.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R045",
+      "game": "Death Stranding 2",
+      "title_id": "",
+      "firmware": "11.40",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD externo USB / External USB SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O autor diz que 90% do tempo corre sem problemas num SSD USB 3.1 externo, com alguns stutters ao acordar e atrasos de input ocasionais.",
+      "summary_en": "The author says it runs flawlessly 90% of the time on an external USB 3.1 SSD, with occasional stutters on waking and input delay.",
+      "source": "reddit-ds2-1140",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Stutters ocasionais e atraso de input.",
+      "symptoms_en": "Occasional stutters and input delay.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R046",
+      "game": "Death Stranding 2",
+      "title_id": "",
+      "firmware": "10.01 / 7.61 (relatos distintos / separate reports)",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD NVMe externo / External NVMe SSD"
+      ],
+      "status": "completed",
+      "summary_pt": "Um comentário separado relata cerca de 30 horas com formato pasta num SSD NVMe externo, sem os problemas de input do relato exFAT. A configuração de firmware varia entre as respostas.",
+      "summary_en": "A separate comment reports around 30 hours using folder format on an external NVMe SSD without the input issues from the exFAT report. Firmware differs across replies.",
+      "source": "reddit-ds2-1140",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Cerca de 30 horas, conforme comentário.",
+      "extent_en": "Around 30 hours, according to comment.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "Relato separado; não comparar como teste controlado.",
+      "note_en": "Separate report; not a controlled comparison."
+    },
+    {
+      "id": "R047",
+      "game": "Death Stranding 2",
+      "title_id": "",
+      "firmware": "13.60 (contexto da publicação / post context)",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O jogo inicia e pode ser jogado, mas os saves desaparecem depois de criados. Um comentário posterior diz que o problema foi resolvido por uma alteração de overlay, sem confirmação independente.",
+      "summary_en": "The game launches and can be played, but saves disappear after being created. A later comment says an overlay change resolved the problem, without independent confirmation.",
+      "source": "reddit-ds2-1360",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Saves não persistem.",
+      "symptoms_en": "Saves do not persist.",
+      "resolution_pt": "Há um relato individual de resolução, ainda sem confirmação independente.",
+      "resolution_en": "One individual fix is reported, without independent confirmation.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R048",
+      "game": "Assassin's Creed Shadows",
+      "title_id": "PPSA20397",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "Não indicada / Not stated"
+      ],
+      "status": "resolved",
+      "summary_pt": "A versão 01.019.076 (PPSA20397) crashava quando a saída de áudio estava em Dolby Atmos e iniciava normalmente com Linear PCM, segundo um issue encerrado.",
+      "summary_en": "Version 01.019.076 (PPSA20397) crashed with Dolby Atmos output and launched normally with Linear PCM, according to a closed issue.",
+      "source": "github-smplus-116",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.019.076",
+      "tools": "ShadowMountPlus 1.7beta2; APR-emu 0.4.2.1 (as reported)",
+      "extent_pt": "Comportamento descrito como reprodutível na mesma configuração.",
+      "extent_en": "Behaviour described as reproducible on the same setup.",
+      "symptoms_pt": "Crash com Dolby Atmos.",
+      "symptoms_en": "Crash with Dolby Atmos.",
+      "resolution_pt": "Mudar para Linear PCM resolveu o crash neste teste.",
+      "resolution_en": "Switching to Linear PCM resolved the crash in this test.",
+      "quality": "high",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R049",
+      "game": "The Witcher 3: Complete Edition",
+      "title_id": "PPSA03977",
+      "firmware": "12.00.43 (PS5 Pro)",
+      "formats": [
+        "Folder / dump",
+        "exFAT"
+      ],
+      "storage": [
+        "USB externo / External USB",
+        "SSD M.2"
+      ],
+      "status": "crashes",
+      "summary_pt": "No issue #77, o autor relata que o jogo crasha antes de KStuff carregar em firmware 12.00.43 na PS5 Pro; tentou pasta em USB/Ext1 e exFAT em USB. A causa não foi isolada.",
+      "summary_en": "In issue #77, the reporter says the game crashes before KStuff loads on firmware 12.00.43 on PS5 Pro; they tried folders on USB/Ext1 and exFAT on USB. The cause was not isolated.",
+      "source": "github-smplus-77",
+      "console": "PS5 Pro",
+      "game_version": "Não indicada / Not stated",
+      "tools": "KStuff Lite 1.07b; ShadowMountPlus 1.6test15-fix2 (as reported)",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Crash antes de KStuff carregar.",
+      "symptoms_en": "Crash before KStuff loads.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R050",
+      "game": "The Witcher 3: Complete Edition",
+      "title_id": "",
+      "firmware": "4.03",
+      "formats": [
+        "Folder / dump",
+        "exFAT"
+      ],
+      "storage": [
+        "USB externo / External USB",
+        "SSD M.2"
+      ],
+      "status": "completed",
+      "summary_pt": "O mesmo issue indica que o jogo funcionou em firmware 4.03, em pasta ou exFAT a partir de USB/SSD externo, com as ferramentas indicadas. É uma configuração diferente do teste em 12.00.43.",
+      "summary_en": "The same issue says the game worked on firmware 4.03 as folder or exFAT from USB/external SSD with the stated tools. This is a different setup from the 12.00.43 test.",
+      "source": "github-smplus-77",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "KStuff Lite 1.07b; ShadowMountPlus 1.6test15-fix2 (as reported)",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "Mostra que o resultado varia por firmware/configuração.",
+      "note_en": "Shows that results vary by firmware/setup."
+    },
+    {
+      "id": "R051",
+      "game": "Ghost of Tsushima",
+      "title_id": "",
+      "firmware": "12.00 / 4.03 (notas conjuntas / combined notes)",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "Não indicada / Not stated"
+      ],
+      "status": "completed",
+      "summary_pt": "O autor do issue #77 diz que outros títulos — incluindo Ghost of Tsushima — foram testados sem problemas em sistemas 12.00 e 4.03, mas não documenta formato, versão nem armazenamento deste jogo.",
+      "summary_en": "The author of issue #77 says other titles—including Ghost of Tsushima—were tested without issues on 12.00 and 4.03 systems, but does not document this game's format, version or storage.",
+      "source": "github-smplus-77",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Nota genérica de testes; configuração exata desconhecida.",
+      "extent_en": "General testing note; exact setup unknown.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R052",
+      "game": "Dead Space",
+      "title_id": "",
+      "firmware": "12.00 / 4.03 (notas conjuntas / combined notes)",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "Não indicada / Not stated"
+      ],
+      "status": "completed",
+      "summary_pt": "O autor do issue #77 inclui Dead Space entre os jogos testados sem problemas em sistemas 12.00 e 4.03. Não há dados de formato ou versão específicos para este título.",
+      "summary_en": "The author of issue #77 includes Dead Space among games tested without issues on 12.00 and 4.03 systems. No title-specific format or version is given.",
+      "source": "github-smplus-77",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Nota genérica de testes; configuração exata desconhecida.",
+      "extent_en": "General testing note; exact setup unknown.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R053",
+      "game": "Lies of P",
+      "title_id": "",
+      "firmware": "12.00 / 4.03 (notas conjuntas / combined notes)",
+      "formats": [
+        "Não indicado / Not stated"
+      ],
+      "storage": [
+        "Não indicada / Not stated"
+      ],
+      "status": "completed",
+      "summary_pt": "O autor do issue #77 inclui Lies of P entre os jogos testados sem problemas em sistemas 12.00 e 4.03. Não há dados de formato ou versão específicos para este título.",
+      "summary_en": "The author of issue #77 includes Lies of P among games tested without issues on 12.00 and 4.03 systems. No title-specific format or version is given.",
+      "source": "github-smplus-77",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Nota genérica de testes; configuração exata desconhecida.",
+      "extent_en": "General testing note; exact setup unknown.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R082",
+      "game": "Ghost Master Resurrection",
+      "title_id": "PPSA34038",
+      "firmware": "6.02",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "USB externo / External USB"
+      ],
+      "status": "crashes",
+      "summary_pt": "O issue relata kernel panic quando a imagem PPSA34038 de Ghost Master Resurrection tinha parênteses no nome do ficheiro. A fonte não prova que o formato seja a causa isolada; o gatilho reportado foi a combinação de imagem PFS e nome do ficheiro.",
+      "summary_en": "The issue reports a kernel panic when the Ghost Master Resurrection PPSA34038 image filename contained parentheses. The source does not prove the format alone was the cause; the reported trigger was the combination of a PFS image and its filename.",
+      "source": "github-smplus-66",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "ShadowMountPlus 1.6test15-fix2; KStuff Lite 1.7 beta (as reported)",
+      "extent_pt": "Âmbito do teste não indicado.",
+      "extent_en": "Test scope not stated.",
+      "symptoms_pt": "Kernel panic durante a varredura/montagem.",
+      "symptoms_en": "Kernel panic during scan/mount.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "Relato histórico e dependente da versão; não generalizar para versões atuais sem voltar a verificar a issue.",
+      "note_en": "Historical, version-dependent report; do not generalize to current versions without rechecking the issue."
+    },
+    {
+      "id": "R083",
+      "game": "Ghost Master Resurrection",
+      "title_id": "PPSA34038",
+      "firmware": "6.02",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "USB externo / External USB"
+      ],
+      "status": "resolved",
+      "summary_pt": "Na mesma issue, o autor diz que a imagem voltou a ser carregada depois de retirar os parênteses do nome do ficheiro. Esta é a resolução relatada naquele cenário específico.",
+      "summary_en": "In the same issue, the author says the image loaded after removing parentheses from the filename. This is the resolution reported for that specific setup.",
+      "source": "github-smplus-66",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "ShadowMountPlus 1.6test15-fix2; KStuff Lite 1.7 beta (as reported)",
+      "extent_pt": "Resolução relatada pelo autor; não testada de forma independente pelo Atlas.",
+      "extent_en": "Resolution reported by the author; not independently tested by the Atlas.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Retirar os parênteses do nome do ficheiro resolveu o caso reportado.",
+      "resolution_en": "Removing parentheses from the filename resolved the reported case.",
+      "quality": "medium",
+      "note_pt": "Não é uma recomendação universal nem prova que todos os problemas de montagem tenham a mesma causa.",
+      "note_en": "Not a universal recommendation and not proof that all mount problems share the same cause."
+    },
+    {
+      "id": "R054",
+      "game": "Death Stranding 2: On the Beach",
+      "title_id": "PPSA02015",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista comunitária inclui PPSA02015 v01.013.000 como iniciado/testado em exFAT no SSD M.2 de expansão. O autor avisa que a maioria dos testes durou apenas alguns minutos; não equivale a conclusão do jogo.",
+      "summary_en": "The community list includes PPSA02015 v01.013.000 as launched/tested in exFAT on the M.2 expansion SSD. The author warns most tests lasted only a few minutes; this is not a full-game completion report.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.013.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; apenas alguns minutos segundo o autor.",
+      "extent_en": "Short test; only a few minutes according to the author.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "O post indica que é necessário um índice APR gerado manualmente para este cenário; não é uma garantia nem uma instrução de compatibilidade universal.",
+      "note_en": "The post says this scenario requires a manually generated APR index; this is not a guarantee or universal compatibility instruction."
+    },
+    {
+      "id": "R055",
+      "game": "Death Stranding 2: On the Beach",
+      "title_id": "PPSA02015",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "O mesmo autor inclui PPSA02015 v01.013.000 em .ffpfsc no M.2 de expansão. O teste foi apenas de alguns minutos; o autor recomenda cautela devido a tempos de carregamento e possível stutter em imagens comprimidas.",
+      "summary_en": "The same author lists PPSA02015 v01.013.000 in .ffpfsc on the M.2 expansion SSD. Testing lasted only a few minutes; the author cautions about load times and possible stutter with compressed images.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.013.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; não confirma estabilidade prolongada.",
+      "extent_en": "Short test; long-term stability not confirmed.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R056",
+      "game": "F1 25",
+      "title_id": "PPSA24662",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista indica PPSA24662 v01.018.000 como testado em exFAT no M.2 de expansão. O autor só testou os jogos durante alguns minutos e não confirmou uma sessão prolongada.",
+      "summary_en": "The list reports PPSA24662 v01.018.000 tested as exFAT on the M.2 expansion SSD. The author only tested games for a few minutes and did not confirm an extended session.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.018.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; poucos minutos.",
+      "extent_en": "Short test; a few minutes.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R057",
+      "game": "F1 25",
+      "title_id": "PPSA24662",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista indica PPSA24662 v01.018.000 como testado em .ffpfsc no M.2 de expansão, mas sem prova de conclusão nem estabilidade após várias horas.",
+      "summary_en": "The list reports PPSA24662 v01.018.000 tested as .ffpfsc on the M.2 expansion SSD, but provides no evidence of completion or multi-hour stability.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.018.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; poucos minutos.",
+      "extent_en": "Short test; a few minutes.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R058",
+      "game": "Forspoken",
+      "title_id": "PPSA03984",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA03984 v01.020 em exFAT no M.2 de expansão. O autor menciona que este cenário depende de um índice APR preparado separadamente, e que não testou o jogo durante muito tempo.",
+      "summary_en": "The list includes PPSA03984 v01.020 as exFAT on the M.2 expansion SSD. The author notes this setup depends on a separately prepared APR index and that the game was not tested for long.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.020",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; sem confirmação de conclusão.",
+      "extent_en": "Short test; completion not confirmed.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R059",
+      "game": "Horizon Zero Dawn Remastered",
+      "title_id": "PPSA13428",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA13428 v01.008.001 como iniciado/testado em exFAT no M.2 de expansão. O teste foi breve e não demonstra que todo o jogo funcione sem problemas.",
+      "summary_en": "The list includes PPSA13428 v01.008.001 as launched/tested in exFAT on the M.2 expansion SSD. The test was brief and does not show that the entire game runs without issues.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.008.001",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; poucos minutos.",
+      "extent_en": "Short test; a few minutes.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R060",
+      "game": "Horizon Zero Dawn Remastered",
+      "title_id": "PPSA13428",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA13428 v01.008.001 em .ffpfsc no M.2 de expansão, com a ressalva de que os testes foram apenas de alguns minutos.",
+      "summary_en": "The list includes PPSA13428 v01.008.001 as .ffpfsc on the M.2 expansion SSD, with the caveat that testing lasted only a few minutes.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.008.001",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; estabilidade prolongada desconhecida.",
+      "extent_en": "Short test; long-term stability unknown.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R061",
+      "game": "Horizon Forbidden West",
+      "title_id": "PPSA17905",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA17905 v01.030.000 em exFAT no M.2 de expansão. O autor identifica uma variante USA e não declara ter concluído o jogo neste teste.",
+      "summary_en": "The list includes PPSA17905 v01.030.000 as exFAT on the M.2 expansion SSD. The author identifies a USA variant and does not state that the game was completed in this test.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.030.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; não equivale a jogo concluído.",
+      "extent_en": "Short test; not a completed-game report.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R062",
+      "game": "Horizon Forbidden West",
+      "title_id": "PPSA17905",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA17905 v01.030.000 em .ffpfsc no M.2 de expansão. O próprio autor alerta para lentidão de imagens comprimidas em jogos exigentes; não há relato de conclusão.",
+      "summary_en": "The list includes PPSA17905 v01.030.000 as .ffpfsc on the M.2 expansion SSD. The author cautions that compressed images may be slow in demanding games; no completion report is given.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.030.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; desempenho prolongado não verificado.",
+      "extent_en": "Short test; long-term performance not verified.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R063",
+      "game": "Final Fantasy VII Remake",
+      "title_id": "PPSA01903",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA01903 v01.003.000 em exFAT no M.2 de expansão. O registo não indica duração nem conclusão do jogo.",
+      "summary_en": "The list includes PPSA01903 v01.003.000 as exFAT on the M.2 expansion SSD. The record does not state duration or completion.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.003.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; duração não especificada além da ressalva geral do post.",
+      "extent_en": "Short test; duration not specified beyond the post-wide caveat.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R064",
+      "game": "Final Fantasy VII Remake",
+      "title_id": "PPSA01903",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA01903 v01.003.000 em .ffpfsc no M.2 de expansão. A fonte avisa que imagens comprimidas podem causar carregamentos longos e pop-in; não há teste prolongado documentado.",
+      "summary_en": "The list includes PPSA01903 v01.003.000 as .ffpfsc on the M.2 expansion SSD. The source warns compressed images can cause long loading and pop-in; no extended test is documented.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.003.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; estabilidade prolongada não verificada.",
+      "extent_en": "Short test; long-term stability not verified.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R065",
+      "game": "Spider-Man 2",
+      "title_id": "PPSA03016",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA03016 v01.004.003 em exFAT no M.2 de expansão e diz que a variante testada funcionou. O autor salienta que os testes foram breves; relatos de outras unidades e formatos diferem.",
+      "summary_en": "The list includes PPSA03016 v01.004.003 as exFAT on the M.2 expansion SSD and says the tested variant worked. The author stresses testing was brief; reports from other drives and formats differ.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.004.003",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; não confirma conclusão.",
+      "extent_en": "Short test; completion not confirmed.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "Não conflui com o relato separado de ecrã preto em pasta num SSD externo; contexto e formato diferentes.",
+      "note_en": "Do not merge with the separate black-screen report for a folder on external SSD; context and format differ."
+    },
+    {
+      "id": "R066",
+      "game": "Spider-Man 2",
+      "title_id": "PPSA03016",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "A mesma lista classifica PPSA03016 v01.004.003 em .ffpfsc como não jogável na configuração testada. O comportamento é específico da versão/formato/contexto reportado.",
+      "summary_en": "The same list labels PPSA03016 v01.004.003 in .ffpfsc as unplayable in the tested setup. This is specific to the reported version/format/context.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.004.003",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Resultado negativo relatado; não extrapolar para outras unidades.",
+      "extent_en": "Reported negative result; do not extrapolate to other storage setups.",
+      "symptoms_pt": "Descrito como não jogável.",
+      "symptoms_en": "Described as unplayable.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "A mesma thread contém outros resultados para Spider-Man 2 em HDD/flash externos, com desempenho diferente.",
+      "note_en": "The same thread includes other Spider-Man 2 results on external HDD/flash storage with different performance."
+    },
+    {
+      "id": "R067",
+      "game": "My First Gran Turismo",
+      "title_id": "PPSA24156",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA24156 v01.010 em exFAT no M.2 de expansão, mas nota que este fluxo depende de componentes/índice APR específicos. O teste não foi prolongado.",
+      "summary_en": "The list includes PPSA24156 v01.010 as exFAT on the M.2 expansion SSD, while noting this workflow depends on specific APR components/indexing. Testing was not extended.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.010",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; não confirma conclusão.",
+      "extent_en": "Short test; completion not confirmed.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R068",
+      "game": "Sniper Elite Resistance",
+      "title_id": "PPSA17232",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "A lista inclui PPSA17232 v01.010.000 em .ffpfsc no M.2 de expansão. O autor não declara ter concluído o jogo.",
+      "summary_en": "The list includes PPSA17232 v01.010.000 as .ffpfsc on the M.2 expansion SSD. The author does not state that the game was completed.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.010.000",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; poucos minutos no contexto geral do post.",
+      "extent_en": "Short test; a few minutes in the post's general context.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R069",
+      "game": "Stellar Blade",
+      "title_id": "PPSA13195",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "O autor principal inclui PPSA13195 v01.014.001 em exFAT no M.2 de expansão. O registo foi acrescentado após testes breves; não comprova conclusão do jogo.",
+      "summary_en": "The main author includes PPSA13195 v01.014.001 as exFAT on the M.2 expansion SSD. The entry was added after brief tests; it does not prove game completion.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.014.001",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; sem prova de conclusão.",
+      "extent_en": "Short test; no completion evidence.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R070",
+      "game": "Stellar Blade",
+      "title_id": "PPSA13195",
+      "firmware": "11.60",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "O autor principal inclui PPSA13195 v01.014.001 em .ffpfsc no M.2 de expansão. A fonte indica teste curto, pelo que o estado é preliminar.",
+      "summary_en": "The main author includes PPSA13195 v01.014.001 as .ffpfsc on the M.2 expansion SSD. The source says testing was brief, so the status remains preliminary.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.014.001",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Teste curto; estabilidade prolongada desconhecida.",
+      "extent_en": "Short test; long-term stability unknown.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R071",
+      "game": "Final Fantasy VII Rebirth",
+      "title_id": "PPSA08668",
+      "firmware": "11.60",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "crashes",
+      "summary_pt": "O autor reporta que PPSA08668 v01.080 continua a crashar após o arranque em exFAT no M.2 de expansão, mesmo depois de gerar o índice APR. O registo é específico desta configuração e do estado no momento da publicação.",
+      "summary_en": "The author reports PPSA08668 v01.080 still crashing after launch as exFAT on the M.2 expansion SSD, even after generating the APR index. This entry is specific to this setup and the state at the time of posting.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "01.080",
+      "tools": "KStuff Lite 1.07 beta; ShadowMountPlus 1.6test15-fix2; ELF Arsenal 1.6.7 (as reported)",
+      "extent_pt": "Crash após o arranque; sem confirmação de jogo funcional neste registo.",
+      "extent_en": "Crash after launch; this record does not confirm successful gameplay.",
+      "symptoms_pt": "Crash depois de iniciar.",
+      "symptoms_en": "Crash after launch.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "Um comentário posterior de outro utilizador relata resultado diferente numa configuração que não está totalmente documentada; ver a fonte.",
+      "note_en": "A later comment from another user reports a different result in a setup that is not fully documented; see source."
+    },
+    {
+      "id": "R072",
+      "game": "Assassin's Creed Mirage",
+      "title_id": "",
+      "firmware": "10.20",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD externo / External SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "Um comentador diz que Assassin's Creed Mirage funcionou em formato de pasta num SSD externo em firmware 10.20. Não testou armazenamento interno e não fornece versão do jogo nem ferramentas exatas.",
+      "summary_en": "A commenter says Assassin's Creed Mirage worked as a folder on an external SSD on firmware 10.20. They did not test internal storage and did not give the game version or exact tools.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Resultado reportado; sem duração ou conclusão documentada.",
+      "extent_en": "Reported result; duration or completion not documented.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "A mesma pessoa não conseguiu fazê-lo funcionar em .ffpfsc; manter os formatos separados.",
+      "note_en": "The same person could not get it working as .ffpfsc; keep the formats separate."
+    },
+    {
+      "id": "R073",
+      "game": "Assassin's Creed Mirage",
+      "title_id": "",
+      "firmware": "10.20",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD externo / External SSD"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "O mesmo comentador diz que não conseguiu iniciar Assassin's Creed Mirage em .ffpfsc no seu SSD externo. O relato não indica versão do jogo nem uma resolução.",
+      "summary_en": "The same commenter says they could not get Assassin's Creed Mirage to work as .ffpfsc on their external SSD. The report gives no game version or resolution.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Falha reportada num cenário; não generalizar a outras versões.",
+      "extent_en": "Reported failure in one setup; do not generalize to other versions.",
+      "symptoms_pt": "Não funciona/inicia no cenário relatado.",
+      "symptoms_en": "Did not work/launch in the reported setup.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R074",
+      "game": "Spider-Man 2",
+      "title_id": "",
+      "firmware": "6.02",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "HDD externo / External HDD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "Um teste em firmware 6.02 descreve exFAT num HDD externo como praticamente injogável por stuttering em certas zonas. O próprio tópico contrasta com melhor comportamento em meios externos mais rápidos.",
+      "summary_en": "A firmware 6.02 test describes exFAT on an external HDD as nearly unplayable due to stutter in certain areas. The thread contrasts this with better behaviour on faster external media.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Teste de gameplay; o relato não indica duração completa.",
+      "extent_en": "Gameplay test; no full playthrough duration stated.",
+      "symptoms_pt": "Stuttering muito intenso em certas zonas.",
+      "symptoms_en": "Severe stutter in certain areas.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "A comparação com outra unidade não isola todas as variáveis do armazenamento.",
+      "note_en": "The comparison with another drive does not isolate all storage variables."
+    },
+    {
+      "id": "R075",
+      "game": "Spider-Man 2",
+      "title_id": "",
+      "firmware": "6.02",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "HDD externo / External HDD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "No mesmo conjunto de testes em firmware 6.02, .ffpfsc num HDD externo foi descrito como praticamente injogável devido a stuttering em certas zonas.",
+      "summary_en": "In the same firmware 6.02 test set, .ffpfsc on an external HDD was described as nearly unplayable due to stutter in certain areas.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Teste de gameplay; sem conclusão documentada.",
+      "extent_en": "Gameplay test; no completion documented.",
+      "symptoms_pt": "Stuttering intenso.",
+      "symptoms_en": "Severe stutter.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R076",
+      "game": "Spider-Man 2",
+      "title_id": "",
+      "firmware": "6.02",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "USB externo (flash drive) / External USB flash drive"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "O comentador diz que .ffpfsc num dispositivo USB flash externo permitiu jogar, mas com stuttering percetível em pontos específicos, incluindo uma sequência inicial de salto entre telhados.",
+      "summary_en": "The commenter says .ffpfsc on an external USB flash drive was playable, but with noticeable stutter at specific points, including an early rooftop-jump sequence.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Teste parcial; sem conclusão documentada.",
+      "extent_en": "Partial test; no completion documented.",
+      "symptoms_pt": "Stuttering em pontos específicos.",
+      "symptoms_en": "Stutter at specific points.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "Não é diretamente comparável ao resultado em HDD externo; a unidade é diferente.",
+      "note_en": "Not directly comparable with the external HDD result; the drive is different."
+    },
+    {
+      "id": "R077",
+      "game": "Spider-Man 2",
+      "title_id": "",
+      "firmware": "6.02",
+      "formats": [
+        "exFAT"
+      ],
+      "storage": [
+        "USB externo (flash drive) / External USB flash drive"
+      ],
+      "status": "crashes",
+      "summary_pt": "O mesmo comentador conseguiu chegar à primeira sequência de teia em exFAT num USB flash externo, mas relata crash antes de completar a cena.",
+      "summary_en": "The same commenter reached the first web-swinging sequence in exFAT on an external USB flash drive, but reports a crash before completing the scene.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Falha durante uma sequência inicial.",
+      "extent_en": "Failure during an early sequence.",
+      "symptoms_pt": "Crash numa sequência inicial.",
+      "symptoms_en": "Crash during an early sequence.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "medium",
+      "note_pt": "",
+      "note_en": ""
+    },
+    {
+      "id": "R078",
+      "game": "Assassin's Creed Shadows",
+      "title_id": "",
+      "firmware": "Firmware não indicado / Not stated",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD externo / External SSD"
+      ],
+      "status": "playable_issues",
+      "summary_pt": "Um comentador diz que Assassin's Creed Shadows em .ffpfsc num SSD NVMe externo é tecnicamente jogável, mas pausa frequentemente para carregar texturas, tornando a experiência muito problemática. O firmware e a versão do jogo do comentador não são indicados.",
+      "summary_en": "A commenter says Assassin's Creed Shadows in .ffpfsc on an external NVMe SSD is technically playable but pauses frequently to load textures, making the experience very poor. The commenter's firmware and game version are not stated.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Relato independente num comentário; duração não indicada.",
+      "extent_en": "Separate comment report; duration not stated.",
+      "symptoms_pt": "Pausas frequentes para carregar texturas.",
+      "symptoms_en": "Frequent pauses to load textures.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "Não atribuir o firmware da publicação principal ao comentador sem confirmação.",
+      "note_en": "Do not assign the main post's firmware to this commenter without confirmation."
+    },
+    {
+      "id": "R079",
+      "game": "Astro Bot",
+      "title_id": "",
+      "firmware": "Firmware não indicado / Not stated",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "launch_failed",
+      "summary_pt": "Um utilizador relata que Astro Bot em .ffpfsc ficou bloqueado no primeiro ecrã. Não indica firmware nem versão exata da ferramenta de criação.",
+      "summary_en": "A user reports Astro Bot in .ffpfsc stuck at the first screen. Firmware and exact image-creation tool version are not stated.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Falha inicial; só foi testado este formato.",
+      "extent_en": "Initial failure; only this format was tested.",
+      "symptoms_pt": "Não passa do primeiro ecrã.",
+      "symptoms_en": "Does not progress beyond the first screen.",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "A mesma thread contém um relato posterior favorável, noutra configuração não totalmente documentada.",
+      "note_en": "The same thread includes a later positive report in a different, incompletely documented setup."
+    },
+    {
+      "id": "R080",
+      "game": "Astro Bot",
+      "title_id": "",
+      "firmware": "Firmware não indicado / Not stated",
+      "formats": [
+        ".ffpfsc"
+      ],
+      "storage": [
+        "SSD M.2 (expansion slot) / M.2 expansion SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "Outro comentador na mesma thread diz estar a jogar Astro Bot em .ffpfsc no M.2 de expansão sem problemas evidentes, mas não indica firmware, versão do jogo ou duração do teste.",
+      "summary_en": "Another commenter in the same thread says they are playing Astro Bot as .ffpfsc on the M.2 expansion SSD without obvious issues, but provides no firmware, game version or test duration.",
+      "source": "reddit-apr-m2",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Não indicadas / Not stated",
+      "extent_pt": "Teste preliminar descrito em comentário.",
+      "extent_en": "Preliminary test described in a comment.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "Contradiz um relato de falha inicial de Astro Bot em .ffpfsc; mantém-se separado por falta de configuração comparável.",
+      "note_en": "Contradicts an initial Astro Bot .ffpfsc failure report; kept separate because comparable setup details are missing."
+    },
+    {
+      "id": "R081",
+      "game": "Clair Obscur: Expedition 33",
+      "title_id": "",
+      "firmware": "11.60",
+      "formats": [
+        "Folder / dump"
+      ],
+      "storage": [
+        "SSD interno original / Original internal SSD"
+      ],
+      "status": "playable_short",
+      "summary_pt": "O autor de um post de firmware 11.60 inclui Expedition 33 entre os jogos PS5 testados em pasta no armazenamento interno. Não indica duração, versão exata nem conclusão; tratado como teste preliminar.",
+      "summary_en": "The author of a firmware 11.60 post includes Expedition 33 among PS5 games tested as a folder on internal storage. Duration, exact version and completion are not stated; treated as preliminary.",
+      "source": "reddit-internal-y2jb",
+      "console": "Não indicado / Not stated",
+      "game_version": "Não indicada / Not stated",
+      "tools": "Y2JB-P2JB V2.4; ShadowMountPlus/KStuff Lite (versions not specified in the specific report)",
+      "extent_pt": "Teste limitado; sem declaração de conclusão.",
+      "extent_en": "Limited test; no completion stated.",
+      "symptoms_pt": "",
+      "symptoms_en": "",
+      "resolution_pt": "Não indicada.",
+      "resolution_en": "Not reported.",
+      "quality": "low",
+      "note_pt": "O post principal também menciona um jogo PS4; esse resultado não foi misturado nesta base de jogos PS5.",
+      "note_en": "The main post also mentions a PS4 game; that result was not mixed into this PS5 game database."
+    }
+  ]
+}
