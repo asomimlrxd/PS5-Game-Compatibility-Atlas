@@ -1,6 +1,6 @@
 # PS5 Game Compatibility Atlas — Português (Portugal)
 
-O **PS5 Game Compatibility Atlas** organiza relatos públicos de jogos PS5 em ambientes homebrew, cruzando firmware, formato, armazenamento, sintomas, duração do teste e fontes originais.
+O **PS5 Game Compatibility Atlas** (interface 0.3.0) organiza relatos públicos de jogos PS5 em ambientes homebrew, cruzando firmware, formato, armazenamento, sintomas, duração do teste e fontes originais.
 
 ## Começar
 
@@ -16,7 +16,8 @@ Abre depois `http://localhost:8000`. O site principal não precisa de backend. O
 
 - 83 registos de teste e 46 nomes de jogos/títulos.
 - 18 fontes públicas e 7 guias de formato.
-- Pesquisa e filtros por firmware, formato, armazenamento e estado.
+- Pesquisa centrada no nome do jogo; filtros técnicos opcionais ficam recolhidos por defeito.
+- Resumo em linguagem simples para cada jogo, com relatos e detalhes técnicos expansíveis.
 - Português de Portugal e inglês, com tema escuro e interface adaptável.
 - Novo separador **Downloads & fontes** para aplicações homebrew publicadas em `homebrew.page` e releases oficiais do GitHub.
 - Fila local de downloads de homebrew com progresso, pausa/retoma quando suportada e verificação SHA-256 antes de guardar o ficheiro. A assinatura Ed25519 do manifesto do catálogo e os hashes dos ficheiros JSON são verificados antes de usar os metadados.
