@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101216">
   <meta name="description" content="PS5 Game Compatibility Atlas — community-reported compatibility results plus official PS5 homebrew sources, checksums and local download queue.">
-  <title>PS5 Game Compatibility Atlas</title>
+  <title>PS5 Game Compatibility Atlas · 0.3.0</title>
   <link rel="icon" href="assets/atlas-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,7 +29,7 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">COMMUNITY RESEARCH PROJECT · PREVIEW 0.2.0</span></div>
+          <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">COMMUNITY RESEARCH PROJECT · VERSION 0.3.0</span></div>
           <h1 data-i18n="heroTitle">Descobre o que funciona.<br><span>Vê primeiro a evidência.</span></h1>
           <p data-i18n="heroText">Pesquisa relatos de jogos PS5 por firmware, formato e armazenamento. Cada resultado mantém a fonte original e distingue testes curtos, problemas por resolver e sessões concluídas.</p>
           <div class="hero-pills">
@@ -72,19 +72,23 @@
           <button id="resetFilters" class="text-button" type="button" data-i18n="resetFilters">Limpar filtros <span aria-hidden="true">↺</span></button>
         </div>
         <div class="filter-panel">
-          <label class="search-field"><span class="search-symbol">⌕</span><input id="searchInput" type="search" placeholder="Pesquisar jogo, Title ID, firmware, sintoma…" data-i18n-placeholder="searchPlaceholder" autocomplete="off"><kbd> / </kbd></label>
-          <div class="filter-row">
+          <label class="search-field"><span class="search-symbol">⌕</span><input id="searchInput" type="search" placeholder="Escreve o nome do jogo (ex.: Astro Bot)…" data-i18n-placeholder="searchPlaceholder" autocomplete="off"><kbd> / </kbd></label>
+          <p class="search-help" data-i18n="searchHelp">Dica: escreve primeiro o nome do jogo. Só precisas dos filtros se quiseres comparar uma configuração específica.</p>
+          <details class="advanced-filters">
+            <summary><span data-i18n="advancedFilters">Filtros adicionais (opcional)</span><span class="advanced-filter-hint" data-i18n="advancedFiltersHint">Firmware, formato e armazenamento</span></summary>
+            <div class="filter-row">
             <label class="filter-control"><span data-i18n="filterFirmware">Firmware</span><select id="firmwareFilter"><option value="all" data-i18n="allFirmwares">Todos</option></select></label>
             <label class="filter-control"><span data-i18n="filterFormat">Formato</span><select id="formatFilter"><option value="all" data-i18n="allFormats">Todos</option><option value="folder">Folder / dump</option><option value="ffpkg">.ffpkg / UFS</option><option value="exfat">.exfat</option><option value="ffpfs">.ffpfs</option><option value="ffpfsc">.ffpfsc</option><option value="lz4">LZ4</option></select></label>
             <label class="filter-control"><span data-i18n="filterStorage">Armazenamento</span><select id="storageFilter"><option value="all" data-i18n="allStorage">Todos</option><option value="internal" data-i18n="storageInternal">SSD interno</option><option value="m2">M.2</option><option value="external-ssd" data-i18n="storageExternalSsd">SSD externo</option><option value="usb" data-i18n="storageUsb">USB / HDD externo</option></select></label>
             <label class="filter-control"><span data-i18n="filterStatus">Estado reportado</span><select id="statusFilter"><option value="all" data-i18n="allStatuses">Todos</option><option value="completed" data-i18n="statusCompleted">Concluído sem problemas</option><option value="playable_issues" data-i18n="statusPlayableIssues">Jogável com problemas</option><option value="playable_short" data-i18n="statusPlayableShort">Teste curto / preliminar</option><option value="resolved" data-i18n="statusResolved">Problema resolvido</option><option value="launch_failed" data-i18n="statusLaunchFailed">Não inicia / ecrã preto</option><option value="crashes" data-i18n="statusCrashes">Crash / freeze</option></select></label>
             <label class="filter-control sort-control"><span data-i18n="sortBy">Ordenar</span><select id="sortFilter"><option value="relevant" data-i18n="sortRelevant">Mais relatos primeiro</option><option value="alpha" data-i18n="sortAlpha">Nome do jogo A–Z</option><option value="problems" data-i18n="sortProblems">Problemas primeiro</option></select></label>
-          </div>
+            </div>
+          </details>
         </div>
         <div class="result-toolbar"><div><strong id="resultsHeading">—</strong><span id="resultsSub"></span></div><span class="result-note"><span class="tiny-shield">✓</span><span data-i18n="reportNote">Cada cartão mantém os testes separados por configuração</span></span></div>
         <div id="resultsGrid" class="results-grid" aria-live="polite"></div>
         <div id="emptyState" class="empty-state hidden"><div class="empty-symbol">⌕</div><h3 data-i18n="emptyTitle">Não foram encontrados resultados</h3><p data-i18n="emptyText">Altera os filtros ou tenta outra pesquisa.</p><button class="control-button" id="emptyReset" type="button" data-i18n="resetFilters">Limpar filtros</button></div>
-        <footer class="view-footer"><span data-i18n="shownFrom">A mostrar registos selecionados da base inicial.</span><span>Atlas v0.2.0</span></footer>
+        <footer class="view-footer"><span data-i18n="shownFrom">A mostrar registos selecionados da base inicial.</span><span>Atlas v0.3.0</span></footer>
       </section>
 
       <section id="view-formats" class="tab-view">
@@ -173,7 +177,7 @@
       </section>
     </main>
 
-    <footer class="app-footer"><div class="footer-brand"><span class="footer-dot"></span><strong>PS5 Game Compatibility Atlas</strong><small data-i18n="footerPreview">Pré-visualização local · v0.2.0</small></div><div class="footer-right"><span data-i18n="footerNoAffiliation">Projeto comunitário independente. Não afiliado à Sony.</span><a href="https://github.com/drakmor/ShadowMountPlus" target="_blank" rel="noopener noreferrer" data-i18n="footerDocumentation">Documentação técnica ↗</a></div></footer>
+    <footer class="app-footer"><div class="footer-brand"><span class="footer-dot"></span><strong>PS5 Game Compatibility Atlas</strong><small data-i18n="footerPreview">Pré-visualização local · v0.3.0</small></div><div class="footer-right"><span data-i18n="footerNoAffiliation">Projeto comunitário independente. Não afiliado à Sony.</span><a href="https://github.com/drakmor/ShadowMountPlus" target="_blank" rel="noopener noreferrer" data-i18n="footerDocumentation">Documentação técnica ↗</a></div></footer>
   </div>
   <script src="data/atlas-data.js"></script>
   <script src="app.js"></script>
