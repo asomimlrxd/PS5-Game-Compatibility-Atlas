@@ -1,0 +1,30 @@
+name: Validate PS5 Game Compatibility Atlas
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate generated data and UI
+        run: |
+          python -m unittest discover -s tests -v
+          python -m py_compile build_data.py
+          node --check app.js
+          node --check downloads.js
