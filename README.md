@@ -1,1 +1,78 @@
-# PS5-Game-Compatibility-Atlas
+# PS5 Game Compatibility Atlas
+
+**Um atlas comunitário, com fontes, dos resultados reportados na execução de jogos PS5 em configurações homebrew.** O site é bilingue (português de Portugal e inglês), responsivo e funciona sem servidor de aplicação.
+
+> **Nota importante:** esta é a versão inicial de investigação, não uma lista definitiva. Os registos são observações públicas, podem ser contraditórios e não garantem que um jogo funcione noutra consola, firmware, versão ou formato. O projeto não aloja jogos, dumps, patches nem ligações para os descarregar.
+
+## Conteúdo da versão 0.1.0
+
+- 83 registos de teste, relativos a 46 nomes de jogos/títulos.
+- 18 fontes públicas indexadas: documentação do ShadowMountPlus, issues do GitHub e publicações/comentários comunitários.
+- 7 guias de formato, distinguindo a indicação do mantenedor dos resultados observados.
+- Pesquisa por jogo, Title ID, firmware, formato, sintomas e texto do relato.
+- Filtros por firmware, formato, tipo de armazenamento e estado reportado.
+- Resultados separados por configuração, incluindo relatos contraditórios.
+- Ligação à publicação original, âmbito do teste, notas de cautela e qualidade da evidência.
+- Contribuições guardadas localmente no navegador e exportação voluntária. Não existe backend e nada é enviado automaticamente.
+- Exportação da base de relatos para CSV (inclui links de fonte) ou JSON.
+
+## Executar localmente
+
+O site é composto por ficheiros estáticos. Com Python instalado, abre um terminal na pasta do projeto e executa:
+
+```bash
+python -m http.server 8000
+```
+
+Depois abre `http://localhost:8000` no navegador. Também podes abrir `index.html` diretamente, mas um servidor local é preferível para persistência das contribuições no navegador.
+
+## Publicar no GitHub Pages
+
+1. Cria um repositório GitHub novo para **PS5 Game Compatibility Atlas**.
+2. Carrega todos os ficheiros e pastas deste projeto para a raiz do ramo `main`.
+3. Abre **Settings → Pages**.
+4. Em **Build and deployment**, seleciona **Deploy from a branch**, escolhe `main` e `/ (root)`.
+5. Guarda e espera que o GitHub Pages publique o site.
+
+O projeto não requer npm, uma base de dados, chaves de API nem serviços externos para a interface principal.
+
+## Atualizar os dados
+
+Os dados de origem editáveis estão em `build_data.py`. Para gerar as duas cópias de dados usadas pela aplicação:
+
+```bash
+python build_data.py
+```
+
+Isto atualiza `data/atlas-data.json`, `data/atlas-data.js` e `data/atlas-reports.csv`. O segundo ficheiro permite que a versão estática funcione mesmo quando `index.html` é aberto em contextos `file://` com restrições de `fetch`.
+
+Antes de publicar alterações, executa:
+
+```bash
+python -m unittest discover -s tests -v
+node --check app.js
+```
+
+Lê `METHODOLOGY.md` e `CONTRIBUTING.md` antes de acrescentar resultados. Não deduzas o firmware, formato, duração ou armazenamento que a fonte não indique. Para os campos em falta, utiliza uma indicação explícita de desconhecido.
+
+## Estrutura
+
+| Ficheiro | Finalidade |
+|---|---|
+| `index.html` | Página e estrutura da aplicação |
+| `styles.css` | Interface responsiva e estilos |
+| `app.js` | Pesquisa, filtros, idioma, contribuições locais e exportação |
+| `data/atlas-data.json` | Dados curados em formato JSON |
+| `data/atlas-reports.csv` | Registos de teste para abrir numa folha de cálculo, com ligações às fontes |
+| `data/atlas-data.js` | Cópia dos dados para carregamento estático/offline |
+| `build_data.py` | Fonte editável dos registos e guias de formato |
+| `METHODOLOGY.md` | Âmbito, classificação da evidência e limitações |
+| `RESEARCH_NOTES.md` | Síntese dos principais padrões e resultados contraditórios encontrados |
+| `CONTRIBUTING.md` | Regras para inserir e rever resultados |
+| `tests/test_dataset.py` | Verificações de integridade do dataset |
+
+## Licenças
+
+O código do projeto está sob a licença MIT, em `LICENSE.txt`. Os resumos e metadados editoriais do Atlas são disponibilizados sob CC BY 4.0, com atribuição às fontes públicas originais, conforme `DATA-LICENSE.md`. As fontes e marcas citadas pertencem aos respetivos titulares.
+
+O Atlas é um projeto comunitário independente, sem afiliação ou endosso da Sony Interactive Entertainment, PlayStation ou dos autores das ferramentas referidas.
