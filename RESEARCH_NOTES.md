@@ -31,3 +31,10 @@ The unit being recorded is a **reported configuration**, not just a game. A game
 ## Source register
 
 The Sources & Methodology section in the site is the canonical source register for this snapshot. Each indexed source has a direct link, source type, date, and notes about what could and could not be concluded from it. The public Google Sheets linked from the community thread was not ingested cell-by-cell because the accessible text view did not expose the complete result grid; the Atlas records this limitation rather than importing unverifiable values.
+
+## Downloads & Sources — connector research (13 Oct 2026)
+
+- The [homebrew.page API specification](https://github.com/blackbearreloaded/ps5-homebrew-catalog/blob/main/docs/api.md) documents the static JSON API, per-app `artifact_url`/`sha256`, and an Ed25519-signed manifest containing SHA-256 hashes for API JSON. The Atlas verifies the signature and file hashes before trusting its metadata, then separately verifies the downloaded artifact against the signed app record.
+- [Orbit Store](https://github.com/saawant12/orbit-store-ps5), [Spectrum Library](https://github.com/Phoenixx1202/Spectrum-Library/releases), and [PS5Library](https://github.com/rdiol12/PS5Library) are connected as external projects/releases only. This implementation does not scrape or copy their downstream game catalogs.
+- [Vikingfile terms](https://vikingfile.com/terms) and the public site were reviewed; no documented API for a lawful, catalog-level integration was established in this research. It is therefore a manual external link, with no scraper or temporary-link/CAPTCHA bypass.
+- GitHub's public release API can provide asset `digest` values for releases. The queue only offers a direct transfer when a SHA-256 is published and the asset URL is on the approved GitHub release hosts; otherwise, it directs the user to the official release page.

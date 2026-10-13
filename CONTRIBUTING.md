@@ -27,5 +27,7 @@ Não inventes valores desconhecidos. Usa «Não indicado»/`unknown` sempre que 
 6. Não inferir firmware do autor de um comentário a partir do contexto da thread sem assinalar essa incerteza.
 7. Não atribuir causalidade definitiva apenas porque uma alteração precedeu a resolução.
 8. Não adicionar links para dumps, jogos, patches ou fontes de distribuição não autorizada.
-9. Todos os registos devem ter `summary_pt` e `summary_en`, uma referência de fonte válida e um ID único.
-10. Depois de editar `build_data.py`, executa o gerador, os testes e `node --check app.js`.
+9. Para o separador Downloads, apenas integrar catálogos de homebrew/repositórios que publiquem a origem, licença e hash quando disponível. Não raspar páginas de file-hosting, não contornar CAPTCHA/logins nem indexar catálogos de jogos comerciais.
+10. Um hash corresponde à integridade contra o valor publicado; não significa que o ficheiro foi auditado ou é seguro.
+11. Todos os registos devem ter `summary_pt` e `summary_en`, uma referência de fonte válida e um ID único.
+12. Depois de editar `build_data.py`, executa o gerador, os testes e `node --check app.js`.

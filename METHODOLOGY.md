@@ -1,7 +1,8 @@
 # Metodologia de investigação
 
 **Corte inicial da investigação:** 13 de outubro de 2026.  
-**Versão da base:** 0.1.0.  
+**Versão da base de compatibilidade:** 0.1.0.
+**Versão da aplicação:** 0.2.0 (inclui downloads de homebrew).  
 **Base inicial:** 83 registos, 46 nomes de jogos/títulos, 18 fontes e 7 guias de formato.
 
 ## Âmbito
@@ -46,6 +47,14 @@ Estes níveis não são scores científicos nem percentagens de probabilidade. U
 A secção «Formatos» separa documentação do mantenedor e relatos dos utilizadores. Na documentação consultada, `.ffpkg`/UFS é a opção recomendada para uso geral, `.exfat` destina-se a compatibilidade com títulos específicos e PFS (`.ffpfs`/`.ffpfsc`) está marcado como experimental. «Folder / dump» e etiquetas comunitárias como LZ4 são mantidas como a fonte as descreve; não são comparadas como se fossem formatos equivalentes em testes controlados.
 
 Também é essencial distinguir o SSD interno original da consola, o SSD M.2 de expansão e unidades USB/externas. O termo «interno» em algumas publicações é ambíguo; o Atlas conserva uma nota quando a thread especifica o slot de expansão.
+
+## Separação entre compatibilidade e downloads
+
+O separador de compatibilidade continua a ser baseado em relatos sobre jogos e configurações. O separador de downloads é separado e consulta o catálogo comunitário `homebrew.page` para aplicações homebrew nativas. Antes de confiar no índice e nas fichas, o Atlas verifica a assinatura Ed25519 do `manifest.json` através das chaves públicas documentadas pelo catálogo e compara o SHA-256 exato dos ficheiros JSON com o manifesto assinado. O artefacto descarregado é depois comparado com o SHA-256 publicado na ficha assinada. Isto melhora a autenticidade dos metadados e a integridade do ficheiro, mas não equivale a uma auditoria independente de segurança nem prova, por si só, os direitos de distribuição.
+
+Orbit Store, Spectrum Library e PS5Library são apresentados como projetos externos e as suas páginas/releases oficiais podem ser consultadas. O Atlas não importa os catálogos de jogos dessas aplicações. Vikingfile é apenas um link manual para a página do fornecedor: não há scraper automático, resolução de links temporários, bypass de CAPTCHA nem integração para descarregar conteúdo de catálogos de jogos. As fontes personalizadas são locais e requerem confirmação do utilizador de que tem autorização para aceder/utilizar os ficheiros.
+
+Downloads diretos só são colocados na fila quando a origem é um catálogo de homebrew ou uma release GitHub e existe um SHA-256 publicado. O navegador precisa de CORS para ler o ficheiro, suporta transferência direta até 120 MB e só permite guardar o blob depois de confirmar o hash. Se o servidor não suportar Range, a retoma começa novamente do início; se CORS bloquear a leitura, a aplicação apresenta a página oficial em vez de contornar a proteção.
 
 ## Exclusões e limitações
 
