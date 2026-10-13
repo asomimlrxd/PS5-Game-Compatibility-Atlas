@@ -456,3 +456,134 @@ h2 { font-size: clamp(24px, 3vw, 31px); line-height: 1.15; letter-spacing: -.04e
 .homebrew-release-notes p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 210px; overflow-y: auto; }
 .homebrew-details .provider-card-actions { margin-top: 10px; }
 .homebrew-details .download-empty small { display: block; margin-top: 6px; overflow-wrap: anywhere; }
+
+
+/* v0.3.0 — readability and plain-language browsing */
+body { font-size: 16px; line-height: 1.65; }
+.app-shell { max-width: 1460px; padding-inline: clamp(16px, 3vw, 38px); }
+.brand-copy strong { font-size: 17px; }
+.brand-copy small, .data-stamp { font-size: 13px; }
+.control-button, .github-link { font-size: 13px; min-height: 40px; }
+.hero { min-height: 260px; padding-top: 38px; padding-bottom: 30px; }
+.eyebrow { font-size: 11px; letter-spacing: .08em; line-height: 1.5; }
+h1 { font-size: clamp(34px, 3.8vw, 54px); }
+.hero-copy > p { font-size: 16px; line-height: 1.7; max-width: 730px; }
+.hero-pills > span { font-size: 13px; padding: 8px 11px; }
+.hero-number strong { font-size: 58px; }
+.hero-number span, .hero-side-bottom { font-size: 13px; text-align: center; padding-inline: 10px; }
+.notice-bar { padding: 15px 17px; }
+.notice-bar p { font-size: 14px; line-height: 1.7; }
+.metric-card { min-height: 110px; padding: 17px 18px; }
+.metric-label { font-size: 12px; letter-spacing: .045em; line-height: 1.4; }
+.metric-card strong { font-size: 30px; }
+.metric-card small { font-size: 12px; line-height: 1.45; }
+.main-tab { font-size: 14px; padding: 14px 16px; }
+.main-tab b { font-size: 11px; }
+h2 { font-size: clamp(25px, 2.6vw, 34px); }
+.section-intro p { font-size: 15px; line-height: 1.7; max-width: 850px; }
+.text-button { font-size: 13px; }
+.filter-panel { padding: 16px; border-radius: 15px; }
+.search-field { height: 52px; padding-inline: 15px; border-radius: 10px; }
+.search-field input { font-size: 16px; }
+.search-field kbd { font-size: 11px; }
+.search-help { margin: -3px 0 14px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.advanced-filters { border-top: 1px solid var(--border-soft); padding-top: 12px; }
+.advanced-filters > summary { display: flex; justify-content: space-between; align-items: center; gap: 15px; cursor: pointer; color: var(--text); font-size: 14px; font-weight: 700; list-style: none; padding: 4px 1px; }
+.advanced-filters > summary::-webkit-details-marker { display: none; }
+.advanced-filters > summary::after { content: "＋"; color: var(--mint); font-size: 18px; line-height: 1; }
+.advanced-filters[open] > summary::after { content: "−"; }
+.advanced-filter-hint { margin-left: auto; color: var(--muted); font-size: 12px; font-weight: 400; }
+.filter-row { margin-top: 14px; }
+.filter-control { font-size: 13px; gap: 7px; }
+.filter-control select, .form-field input, .form-field select, .form-field textarea { font-size: 14px; padding: 11px 12px; min-height: 43px; }
+.filter-control select { height: 44px; }
+.result-toolbar { padding-top: 8px; padding-bottom: 17px; }
+.result-toolbar strong { font-size: 16px; }
+.result-toolbar span { font-size: 13px; }
+.result-note { font-size: 12px !important; }
+.results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.results-grid.single-result { grid-template-columns: minmax(0, 1fr); max-width: 1100px; }
+.game-card { border-radius: 16px; background: linear-gradient(160deg, #151b22, #11161c); }
+.game-card-header { align-items: center; padding: 20px 21px 13px; gap: 16px; }
+.game-card-header h3 { font-size: 23px; letter-spacing: -.025em; line-height: 1.25; }
+.game-card-header .game-subtitle { font-size: 13px; line-height: 1.5; color: var(--muted); margin-top: 5px; }
+.game-card-header .report-count { font-size: 13px; padding: 6px 9px; border-radius: 8px; }
+.card-aggregate { margin: 0 21px 8px; border-radius: 9px; padding: 11px 13px; font-size: 15px; line-height: 1.45; }
+.card-aggregate::before { width: 8px; height: 8px; flex: 0 0 8px; }
+.aggregate-help { margin: 0 21px 17px; font-size: 14px; color: #c2cdd7; line-height: 1.7; }
+.report-details { border-top: 1px solid var(--border-soft); }
+.report-details > summary { display: flex; align-items: center; gap: 10px; cursor: pointer; list-style: none; padding: 15px 21px; color: var(--mint); font-size: 14px; font-weight: 720; }
+.report-details > summary::-webkit-details-marker { display: none; }
+.report-details > summary:hover { background: rgba(108,230,166,.045); }
+.details-chevron { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border: 1px solid rgba(108,230,166,.25); background: var(--mint-soft); border-radius: 7px; font-size: 16px; line-height: 1; }
+.report-details[open] .details-chevron { transform: rotate(45deg); }
+.report-details-content { border-top: 1px solid var(--border-soft); }
+.game-technical-id { margin: 0; padding: 13px 21px; background: rgba(140,183,255,.035); color: var(--muted); font-size: 13px; }
+.game-technical-id strong { color: var(--text); }
+.report-item { padding: 18px 21px 20px; }
+.report-topline { align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+.status-chip { font-size: 13px; line-height: 1.4; padding: 5px 9px; border-radius: 7px; }
+.quality { font-size: 12px; white-space: normal; }
+.quality::before { width: 6px; height: 6px; }
+.report-summary { font-size: 15px; line-height: 1.75; color: #d1dae2; margin-bottom: 13px; }
+.report-meta { gap: 8px; margin: 0 0 13px; }
+.meta-chip { gap: 5px; align-items: baseline; padding: 7px 9px; font-size: 12px; line-height: 1.45; border-radius: 7px; }
+.meta-chip-label { color: var(--muted); font-weight: 500; }
+.meta-chip strong { color: var(--text); font-weight: 650; }
+.report-detail-line { margin: 8px 0 12px; color: #becbd7; font-size: 14px; line-height: 1.7; }
+.report-detail-line strong { color: var(--text); }
+.report-resolution { padding: 10px 12px; font-size: 13px; line-height: 1.7; border-radius: 0 8px 8px 0; margin-bottom: 12px; }
+.report-resolution strong { font-size: 11px; letter-spacing: .04em; }
+.report-caveat { font-size: 13px; line-height: 1.7; padding: 10px 12px; margin-bottom: 12px; }
+.report-footer { align-items: center; padding-top: 3px; gap: 12px; }
+.report-note { font-size: 12px; line-height: 1.6; }
+.source-link { font-size: 13px; }
+.report-scope { margin-top: 10px; }
+.report-scope strong { color: #c5d1db; }
+.empty-state { padding: 55px 22px; }
+.empty-state h3 { font-size: 22px; }
+.empty-state p { font-size: 15px; }
+.format-card p, .format-recommendation, .format-callout p, .method-card p, .method-notes ul { font-size: 14px; }
+.format-card h3 { font-size: 19px; }
+.format-extension, .format-state { font-size: 12px; }
+.source-card h3 { font-size: 15px; }
+.source-card p, .source-card a { font-size: 13px; }
+.source-type, .source-card .source-date { font-size: 11px; }
+.form-field > span, .status-choice { font-size: 13px; }
+.form-field input::placeholder, .form-field textarea::placeholder { font-size: 13px; }
+.view-footer, .app-footer { font-size: 12px; }
+@media (max-width: 900px) {
+  .results-grid { grid-template-columns: 1fr; }
+  .results-grid.single-result { max-width: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-side { min-height: 145px; }
+}
+@media (max-width: 760px) {
+  .app-shell { padding-inline: 15px; }
+  .brand-copy strong { font-size: 14px; }
+  .brand-copy small, .data-stamp { font-size: 11px; }
+  .hero-copy > p { font-size: 15px; }
+  .notice-bar p { font-size: 13px; }
+  .metric-label { font-size: 11px; }
+  .metric-card small { font-size: 11px; }
+  .main-tab { font-size: 12px; padding: 12px 11px; }
+  .section-intro p { font-size: 14px; }
+  .advanced-filters > summary { align-items: flex-start; font-size: 13px; }
+  .advanced-filter-hint { display: none; }
+  .filter-row { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .game-card-header { padding: 17px 16px 12px; }
+  .game-card-header h3 { font-size: 21px; }
+  .card-aggregate { margin-inline: 16px; font-size: 14px; }
+  .aggregate-help { margin-inline: 16px; font-size: 13px; }
+  .report-details > summary { padding: 14px 16px; font-size: 13px; }
+  .report-item { padding: 16px; }
+  .report-summary { font-size: 14px; }
+  .meta-chip { font-size: 12px; }
+  .report-footer { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 420px) {
+  .filter-row { grid-template-columns: 1fr; }
+  .hero-pills > span { font-size: 11px; }
+  .game-card-header { align-items: flex-start; }
+  .game-card-header .report-count { font-size: 11px; }
+}
