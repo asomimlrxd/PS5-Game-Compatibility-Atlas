@@ -1,8 +1,8 @@
 {
   "meta": {
     "project": "PS5 Game Compatibility Atlas",
-    "version": "0.2.0",
-    "application_version": "0.2.0",
+    "version": "0.3.0",
+    "application_version": "0.3.0",
     "research_date": "2026-10-13",
     "description_pt": "Atlas comunitário de resultados reportados por jogo, firmware, formato e armazenamento.",
     "description_en": "Community atlas of reported results by game, firmware, format and storage.",
