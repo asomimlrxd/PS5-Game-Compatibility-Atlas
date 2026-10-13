@@ -1,6 +1,6 @@
 # PS5 Game Compatibility Atlas — English
 
-The **PS5 Game Compatibility Atlas** organizes public PS5 homebrew compatibility reports by game, firmware, format, storage, symptoms, test scope, and original source. Version 0.2.0 adds a separate, provenance-first section for authorized homebrew downloads and project releases.
+The **PS5 Game Compatibility Atlas** (v0.3.0 UI) organizes public PS5 homebrew compatibility reports by game, firmware, format, storage, symptoms, test scope, and original source. Version 0.2.0 adds a separate, provenance-first section for authorized homebrew downloads and project releases.
 
 ## Run locally
 
