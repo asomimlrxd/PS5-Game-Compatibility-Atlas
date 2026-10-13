@@ -4,12 +4,13 @@
 
 > **Nota importante:** esta é a versão inicial de investigação, não uma lista definitiva. Os registos são observações públicas, podem ser contraditórios e não garantem que um jogo funcione noutra consola, firmware, versão ou formato. O projeto não aloja ficheiros. Os downloads na aplicação limitam-se a releases de homebrew e ficheiros com origem e hash publicados. Não agrega nem fornece cópias não autorizadas de jogos comerciais, dumps ou patches.
 
-## Conteúdo da versão 0.2.0
+## Conteúdo da versão 0.3.0
 
 - 83 registos de teste, relativos a 46 nomes de jogos/títulos.
 - 18 fontes públicas indexadas: documentação do ShadowMountPlus, issues do GitHub e publicações/comentários comunitários.
 - 7 guias de formato, distinguindo a indicação do mantenedor dos resultados observados.
-- Pesquisa por jogo, Title ID, firmware, formato, sintomas e texto do relato.
+- Pesquisa centrada no nome do jogo, com filtros técnicos recolhidos por defeito.
+- Cartões com resumo em linguagem simples e relatos detalhados expansíveis.
 - Filtros por firmware, formato, tipo de armazenamento e estado reportado.
 - Resultados separados por configuração, incluindo relatos contraditórios.
 - Ligação à publicação original, âmbito do teste, notas de cautela e qualidade da evidência.
@@ -20,6 +21,10 @@
 - Importação/exportação das fontes e da fila local.
 - Contribuições guardadas localmente no navegador e exportação voluntária. Não existe backend e nada é enviado automaticamente.
 - Exportação da base de relatos para CSV (inclui links de fonte) ou JSON.
+
+## Versão 0.3.0 — interface simplificada
+
+A pesquisa começa pelo nome do jogo. O resumo de cada cartão explica o resultado em linguagem simples; os relatos, Title IDs e parâmetros técnicos aparecem em «Ver relatos e os detalhes». Os filtros de firmware, formato, armazenamento e estado são opcionais e estão recolhidos por defeito.
 
 ## Executar localmente
 

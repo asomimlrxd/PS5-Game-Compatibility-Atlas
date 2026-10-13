@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.0 — Beginner-friendly compatibility UI
+
+- Reworked the game search around a plain-language question: “Does this game work?”
+- Collapsed firmware, format, storage and status filters under an optional advanced-filter disclosure.
+- Replaced always-visible technical reports with a simple per-game summary and expandable report details.
+- Added explanations for mixed, positive, problematic and insufficient evidence states.
+- Increased text sizes, spacing, touch targets and single-result card width for desktop and mobile use.
+- Updated the dataset metadata to 0.3.0 and added CI checks for data parity, source syntax and beginner-friendly UI structure.
+
+
 ## 0.2.0 — Downloads & sources
 
 - Added a Downloads & Sources tab for the community-maintained `homebrew.page` catalogue.
